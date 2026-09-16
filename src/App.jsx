@@ -73,7 +73,7 @@ export default function App() {
       }
     });
 
-    showToast(`Đã thêm ${item.quantity} ${item.name} (${item.variantLabel}) vào giỏ hàng!`);
+    showToast(`Đã thêm ${item.quantity} ${item.name} (${item.variantLabel}) vào giỏ hàng`);
   };
 
   const handleUpdateQuantity = (productId, variantId, newQty) => {
@@ -110,11 +110,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans selection:bg-tea-600 selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-[#111814] font-sans selection:bg-forest-900 selection:text-white relative">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-slate-900/95 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-xs sm:text-sm border border-slate-700 animate-bounce">
-          <CheckCircle className="w-4 h-4 text-tea-400 shrink-0" />
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-forest-950/95 text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-2.5 text-xs sm:text-sm border border-forest-800 animate-fadeIn">
+          <CheckCircle className="w-4 h-4 text-forest-300 shrink-0" strokeWidth={1.75} />
           <span>{toastMessage}</span>
         </div>
       )}
@@ -183,56 +183,52 @@ export default function App() {
         />
       )}
 
-      {/* Floating Action Buttons (Zalo, Hotline, Scroll-to-top) */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-auto">
-        {/* Scroll to top */}
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2.5 pointer-events-auto">
         {showScrollTop && (
           <button
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center shadow-lg hover:bg-slate-900 transition hover:scale-110"
+            className="w-10 h-10 rounded-full bg-white text-forest-950 flex items-center justify-center shadow-lg hover:bg-forest-50 transition-transform duration-150 hover:scale-105 border border-forest-950/10 btn-press"
             title="Lên đầu trang"
           >
-            <ArrowUp className="w-5 h-5" />
+            <ArrowUp className="w-4 h-4" strokeWidth={2} />
           </button>
         )}
 
-        {/* Floating Cart Button (visible on mobile) */}
         {totalCartCount > 0 && (
           <button
             onClick={() => {
               setActivePage('cart');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="relative p-3 rounded-full bg-tea-700 text-white shadow-xl hover:bg-tea-800 transition md:hidden hover:scale-110"
+            className="relative p-3 rounded-full bg-forest-900 text-white shadow-xl hover:bg-forest-950 transition-transform duration-150 md:hidden hover:scale-105 btn-press"
             title="Xem giỏ hàng"
           >
-            <ShoppingBag className="w-6 h-6" />
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">
+            <ShoppingBag className="w-5 h-5" strokeWidth={1.75} />
+            <span className="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">
               {totalCartCount}
             </span>
           </button>
         )}
 
-        {/* Zalo Direct Chat */}
         <a
           href="https://zalo.me/0986728916"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xl hover:scale-105 transition group"
+          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xl transition-transform duration-150 hover:scale-105 btn-press"
           title="Chat Zalo với Trưởng nhóm Mai Lan"
         >
-          <MessageSquare className="w-4 h-4 fill-current group-hover:animate-pulse" />
+          <MessageSquare className="w-4 h-4 fill-current" strokeWidth={1.75} />
           <span className="hidden sm:inline">Chat Zalo Mai Lan</span>
         </a>
 
-        {/* Phone Hotline Call */}
         <a
           href="tel:0986728916"
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-tea-700 hover:bg-tea-800 text-white font-bold text-xs sm:text-sm shadow-xl hover:scale-105 transition"
+          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-xs sm:text-sm shadow-xl transition-transform duration-150 hover:scale-105 btn-press"
           title="Gọi Hotline 0986.728.916"
         >
-          <Phone className="w-4 h-4 animate-bounce" />
-          <span className="font-extrabold">0986.728.916</span>
+          <Phone className="w-4 h-4 text-forest-300" strokeWidth={1.75} />
+          <span className="font-mono font-bold">0986.728.916</span>
         </a>
       </div>
 
