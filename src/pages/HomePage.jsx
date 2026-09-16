@@ -2,6 +2,7 @@ import React from 'react';
 import { products } from '../data/products';
 import { teamMembers } from '../data/team';
 import BiocharCalculator from '../components/BiocharCalculator';
+import SoilComparisonShowcase from '../components/SoilComparisonShowcase';
 
 export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }) {
   const featuredProduct = products[0]; // Biochar bã chè
@@ -10,23 +11,24 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
   return (
     <div className="space-y-24 pb-24">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90dvh] flex items-center bg-[#faf8f5] overflow-hidden border-b border-forest-950/5">
+      <section className="relative min-h-[90dvh] flex items-center bg-gradient-to-b from-[#faf8f5] via-[#f7f9f7] to-[#faf8f5] overflow-hidden border-b border-forest-950/5">
         {/* Subtle background landscape */}
-        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
+        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
           <img
             src="/images/hero_tea_hills.jpg"
             alt="Đồi chè Long Cốc Phú Thọ"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute top-1/3 right-10 w-96 h-96 bg-forest-200/25 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 right-10 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 lg:py-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Focused Copy Stack */}
             <div className="lg:col-span-7 space-y-6">
               {/* Element 1: Eyebrow Badge */}
-              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-forest-100/90 text-forest-900 text-xs font-semibold border border-forest-200/60">
+              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-forest-100/90 text-forest-900 text-xs font-semibold border border-forest-200/60 shadow-xs">
                 <span>Dự Án Khởi Nghiệp Sinh Viên ĐH Hùng Vương 2026</span>
               </div>
 
@@ -42,38 +44,79 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
               </p>
 
               {/* Element 4: Clean CTAs */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
-                <button
-                  onClick={() => setActivePage('shop')}
-                  className="px-7 py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-semibold text-xs sm:text-sm shadow-md transition-all btn-press"
-                >
-                  Khám Phá Sản Phẩm
-                </button>
+              <div className="space-y-3 pt-2">
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={() => setActivePage('shop')}
+                    className="px-7 py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-semibold text-xs sm:text-sm shadow-md transition-all btn-press"
+                  >
+                    Khám Phá Sản Phẩm
+                  </button>
 
-                <button
-                  onClick={() => setActivePage('b2b')}
-                  className="px-7 py-3.5 rounded-full bg-white hover:bg-forest-50 text-forest-950 font-semibold text-xs sm:text-sm border border-forest-950/15 shadow-xs transition-all btn-press"
-                >
-                  Đổi Phế Phẩm Lấy Vật Tư
-                </button>
+                  <button
+                    onClick={() => setActivePage('b2b')}
+                    className="px-7 py-3.5 rounded-full bg-white hover:bg-forest-50 text-forest-950 font-semibold text-xs sm:text-sm border border-forest-950/15 shadow-xs transition-all btn-press"
+                  >
+                    Đổi Phế Phẩm Lấy Vật Tư
+                  </button>
+                </div>
+
+                {/* Micro trust highlights */}
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-charcoal-500 pt-1">
+                  <span className="flex items-center gap-1.5 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-forest-700"></span>
+                    100% Nguồn bã chè Phú Thọ
+                  </span>
+                  <span className="flex items-center gap-1.5 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-forest-700"></span>
+                    Nhiệt phân Syngas tự nuôi lò
+                  </span>
+                  <span className="flex items-center gap-1.5 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-forest-700"></span>
+                    Cắt giảm 30% phân NPK
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Right Column: Hero Visual Asset */}
             <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-md rounded-3xl p-3 bg-white shadow-xl border border-forest-950/10">
-                <img
-                  src="/images/product_biochar.jpg"
-                  alt="Biochar Bã Chè Đất Tổ"
-                  className="w-full rounded-2xl object-cover"
-                />
-                <div className="p-4 bg-white space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-bold text-forest-950">Biochar Bã Chè Đất Tổ</span>
-                    <span className="text-sm font-bold text-forest-700 tabular-nums">85.000 đ / 5kg</span>
+              {/* Soft ambient aura */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-forest-600/15 via-emerald-500/10 to-amber-500/10 rounded-full blur-3xl opacity-70 pointer-events-none" />
+
+              <div className="relative mx-auto max-w-md rounded-3xl p-3.5 bg-white shadow-2xl border border-forest-950/10 group">
+                <div className="relative overflow-hidden rounded-2xl bg-chalk-100">
+                  <img
+                    src="/images/product_biochar.jpg"
+                    alt="Biochar Bã Chè Đất Tổ"
+                    className="w-full rounded-2xl object-cover group-hover:scale-102 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 left-3 bg-forest-950/90 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                    Mẫu Thử Nghiệm MVP 2026
                   </div>
-                  <p className="text-xs text-charcoal-500">
-                    Cấu trúc vi xốp diện tích bề mặt trên 400 m2/g, nâng pH và khóa carbon hơn 100 năm.
+                </div>
+
+                <div className="p-4 bg-white space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-base font-bold text-forest-950">Biochar Bã Chè Đất Tổ</span>
+                    <span className="text-base font-bold text-forest-800 tabular-nums">85.000 đ / 5kg</span>
+                  </div>
+
+                  {/* Specification pills */}
+                  <div className="flex flex-wrap gap-1.5 text-[11px]">
+                    <span className="px-2.5 py-0.5 rounded-full bg-forest-50 text-forest-800 font-semibold border border-forest-200">
+                      pH 8.5 - 9.5 (Kiềm tự nhiên)
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-forest-50 text-forest-800 font-semibold border border-forest-200">
+                      Diện tích 420 m²/g
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 font-semibold border border-amber-200">
+                      Khóa Carbon 100+ năm
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-charcoal-500 leading-relaxed text-pretty">
+                    Cấu trúc vi xốp mao quản giữ ẩm và giải phóng dinh dưỡng từ từ, giải độc nhôm sắt cho đất đồi dốc Phú&nbsp;Thọ.
                   </p>
                 </div>
               </div>
@@ -105,40 +148,40 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
       {/* 3. KEY METRICS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <div className="bg-forest-950 text-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md">
-            <span className="text-xs font-medium text-forest-300">Phế phẩm bã chè</span>
+          <div className="bg-forest-950 text-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xl border border-forest-900">
+            <span className="text-xs font-semibold uppercase tracking-wider text-forest-300">Phế phẩm bã chè</span>
             <div className="my-3">
               <span className="text-3xl sm:text-4xl font-bold tracking-tight tabular-nums">27.000</span>
               <span className="text-xs text-forest-300 ml-1.5 font-semibold">Tấn / Năm</span>
             </div>
-            <p className="text-xs text-forest-200/80 leading-relaxed">Từ 60 nhà máy và 15 HTX chế biến tại Phú Thọ cần được xử lý sạch.</p>
+            <p className="text-xs text-forest-200/80 leading-relaxed text-pretty">Từ 60 nhà máy và 15 HTX chế biến tại Phú Thọ cần được xử lý&nbsp;sạch.</p>
           </div>
 
-          <div className="bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-forest-950/5 shadow-md">
-            <span className="text-xs font-medium text-charcoal-500">Đất canh tác thoái hóa</span>
+          <div className="bg-gradient-to-br from-[#fdfbf7] to-[#fef6ea] rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-amber-300/70 shadow-md">
+            <span className="text-xs font-semibold uppercase tracking-wider text-amber-800">Đất canh tác thoái hóa</span>
             <div className="my-3">
-              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-amber-700 tabular-nums">120.000</span>
-              <span className="text-xs text-charcoal-500 ml-1.5 font-semibold">Héc-ta</span>
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-amber-900 tabular-nums">120.000</span>
+              <span className="text-xs text-amber-700 ml-1.5 font-semibold">Héc-ta</span>
             </div>
-            <p className="text-xs text-charcoal-500 leading-relaxed">Đất đồi dốc trung du bị chua hóa do lạm dụng phân vô cơ nhiều năm.</p>
+            <p className="text-xs text-amber-900/80 leading-relaxed text-pretty">Đất đồi dốc trung du bị chua hóa do lạm dụng phân vô cơ nhiều&nbsp;năm.</p>
           </div>
 
-          <div className="bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-forest-950/5 shadow-md">
-            <span className="text-xs font-medium text-charcoal-500">Lò nhiệt phân Syngas</span>
+          <div className="bg-gradient-to-br from-forest-900 to-forest-950 text-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xl border border-forest-800">
+            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-300">Lò nhiệt phân Syngas</span>
             <div className="my-3">
-              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-forest-800 tabular-nums">80%</span>
-              <span className="text-xs text-charcoal-500 ml-1.5 font-semibold">Tự Nuôi Lò</span>
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-emerald-400 tabular-nums">80%</span>
+              <span className="text-xs text-emerald-200 ml-1.5 font-semibold">Tự Nuôi Lò</span>
             </div>
-            <p className="text-xs text-charcoal-500 leading-relaxed">Thu hồi tuần hoàn khí sinh khối tự đốt sấy, tiết kiệm tối đa chất đốt.</p>
+            <p className="text-xs text-forest-200/80 leading-relaxed text-pretty">Thu hồi tuần hoàn khí sinh khối tự đốt sấy, tiết kiệm tối đa chất&nbsp;đốt.</p>
           </div>
 
-          <div className="bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-forest-950/5 shadow-md">
-            <span className="text-xs font-medium text-charcoal-500">Giá than lọc nước</span>
+          <div className="bg-gradient-to-br from-[#f7faf8] to-[#edf7f0] rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-emerald-300/70 shadow-md">
+            <span className="text-xs font-semibold uppercase tracking-wider text-forest-800">Giá than lọc nước</span>
             <div className="my-3">
               <span className="text-3xl sm:text-4xl font-bold tracking-tight text-forest-950 tabular-nums">1/3</span>
               <span className="text-xs text-forest-700 ml-1.5 font-semibold">Thị Trường</span>
             </div>
-            <p className="text-xs text-charcoal-500 leading-relaxed">Chỉ 12.000 đến 15.000đ/kg than hoạt tính xử lý nước thải công nghiệp.</p>
+            <p className="text-xs text-forest-900/80 leading-relaxed text-pretty">Chỉ 12.000 đến 15.000đ/kg than hoạt tính xử lý nước thải công&nbsp;nghiệp.</p>
           </div>
         </div>
       </section>
@@ -220,45 +263,50 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="p-5 rounded-2xl bg-white border border-forest-950/5 shadow-xs space-y-1.5">
-            <span className="text-xs font-bold text-forest-700 block tracking-wide">01. THU GOM 0 ĐỒNG</span>
-            <h4 className="font-bold text-forest-950 text-sm">Thu gom từ 60 cơ sở chế biến</h4>
-            <p className="text-xs text-charcoal-500">Giúp nhà máy giải quyết 100% rác thải với chi phí tối thiểu.</p>
+          <div className="p-5 rounded-2xl bg-[#faf6f0] border border-amber-300/70 shadow-xs hover:shadow-md transition-all space-y-1.5">
+            <span className="text-xs font-bold text-amber-800 block tracking-wide">01. THU GOM NGUYÊN LIỆU</span>
+            <h4 className="font-bold text-charcoal-900 text-sm">Thu gom từ 60 cơ sở chế biến</h4>
+            <p className="text-xs text-charcoal-600 leading-relaxed text-pretty">Giải quyết triệt để vấn đề rác thải bã chè xả ra môi trường Phú&nbsp;Thọ.</p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-forest-950/5 shadow-xs space-y-1.5">
-            <span className="text-xs font-bold text-forest-700 block tracking-wide">02. SƠ CHẾ & SẤY KHÔ</span>
-            <h4 className="font-bold text-forest-950 text-sm">Hạ độ ẩm dưới 10%</h4>
-            <p className="text-xs text-charcoal-500">Dùng nhiệt dư của khí Syngas sấy khô bã chè tự động.</p>
+          <div className="p-5 rounded-2xl bg-[#fff8f0] border border-orange-300/70 shadow-xs hover:shadow-md transition-all space-y-1.5">
+            <span className="text-xs font-bold text-orange-800 block tracking-wide">02. SƠ CHẾ & SẤY KHÔ</span>
+            <h4 className="font-bold text-charcoal-900 text-sm">Hạ độ ẩm dưới 10%</h4>
+            <p className="text-xs text-charcoal-600 leading-relaxed text-pretty">Tận dụng nhiệt dư từ khí Syngas sấy khô bã chè tự động, tiết kiệm chất&nbsp;đốt.</p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-forest-950 text-white shadow-md space-y-1.5">
-            <span className="text-xs font-bold text-forest-300 block tracking-wide">03. NHIỆT PHÂN CHẬM</span>
+          <div className="p-5 rounded-2xl bg-forest-950 text-white shadow-xl border border-forest-800 ring-1 ring-forest-700/60 space-y-1.5">
+            <span className="text-xs font-bold text-emerald-400 block tracking-wide">03. NHIỆT PHÂN CHẬM</span>
             <h4 className="font-bold text-white text-sm">Dải nhiệt 350°C đến 450°C</h4>
-            <p className="text-xs text-forest-200/80">Lò yếm khí thu hồi Biochar xốp vi mô và khí Syngas tự nuôi nhiệt.</p>
+            <p className="text-xs text-forest-200/90 leading-relaxed text-pretty">Lò yếm khí thu hồi Biochar xốp vi mô và tự tuần hoàn khí Syngas nuôi&nbsp;lò.</p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-forest-950/5 shadow-xs space-y-1.5">
-            <span className="text-xs font-bold text-forest-700 block tracking-wide">04. PHỐI TRỘN VI SINH</span>
-            <h4 className="font-bold text-forest-950 text-sm">Chủng Bacillus & Trichoderma</h4>
-            <p className="text-xs text-charcoal-500">Hoạt hóa thành 3 dòng: Biochar, Phân vi sinh và Than hoạt tính.</p>
+          <div className="p-5 rounded-2xl bg-[#f0f9f3] border border-emerald-300/70 shadow-xs hover:shadow-md transition-all space-y-1.5">
+            <span className="text-xs font-bold text-forest-800 block tracking-wide">04. PHỐI TRỘN VI SINH</span>
+            <h4 className="font-bold text-charcoal-900 text-sm">Chủng Bacillus & Trichoderma</h4>
+            <p className="text-xs text-charcoal-600 leading-relaxed text-pretty">Hoạt hóa thành 3 dòng: Biochar bón lót, Phân vi sinh và Than hoạt&nbsp;tính.</p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-forest-950/5 shadow-xs space-y-1.5">
-            <span className="text-xs font-bold text-forest-700 block tracking-wide">05. BÓN CHO ĐẤT CHÈ</span>
-            <h4 className="font-bold text-forest-950 text-sm">Cải tạo đất chua đồi dốc</h4>
-            <p className="text-xs text-charcoal-500">Cung ứng vật tư xanh rẻ hơn 20 đến 30% cho bà con nông dân.</p>
+          <div className="p-5 rounded-2xl bg-[#fbf7f2] border border-stone-300/80 shadow-xs hover:shadow-md transition-all space-y-1.5">
+            <span className="text-xs font-bold text-amber-900 block tracking-wide">05. BÓN CHO ĐẤT CHÈ</span>
+            <h4 className="font-bold text-charcoal-900 text-sm">Cải tạo đất chua đồi dốc</h4>
+            <p className="text-xs text-charcoal-600 leading-relaxed text-pretty">Cung ứng vật tư xanh rẻ hơn 20 đến 30% cho bà con nông dân địa&nbsp;phương.</p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-forest-950/5 shadow-xs space-y-1.5">
-            <span className="text-xs font-bold text-forest-700 block tracking-wide">06. KHÉP CHU TRÌNH</span>
-            <h4 className="font-bold text-forest-950 text-sm">Búp chè chất lượng cao</h4>
-            <p className="text-xs text-charcoal-500">Chè đạt chuẩn VietGAP/OCOP phục vụ thị trường và xuất khẩu.</p>
+          <div className="p-5 rounded-2xl bg-forest-900 text-white shadow-xl border border-forest-700 space-y-1.5">
+            <span className="text-xs font-bold text-forest-200 block tracking-wide">06. KHÉP CHU TRÌNH</span>
+            <h4 className="font-bold text-white text-sm">Búp chè chất lượng cao</h4>
+            <p className="text-xs text-forest-200/90 leading-relaxed text-pretty">Búp chè đạt chuẩn VietGAP/OCOP phục vụ người tiêu dùng và xuất&nbsp;khẩu.</p>
           </div>
         </div>
       </section>
 
-      {/* 6. FEATURED PRODUCTS */}
+      {/* 6. REAL FIELD EXPERIMENT: SOIL REGENERATION BEFORE & AFTER SHOWCASE */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SoilComparisonShowcase onCalculateClick={() => setActivePage('shop')} />
+      </section>
+
+      {/* 7. FEATURED PRODUCTS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
           <div>

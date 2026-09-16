@@ -1,5 +1,4 @@
 import React from 'react';
-import { Leaf } from 'lucide-react';
 
 export default function Footer({ setActivePage }) {
   const handleNav = (page) => {
@@ -8,23 +7,19 @@ export default function Footer({ setActivePage }) {
   };
 
   return (
-    <footer className="bg-[#0c1410] text-[#a7b5ad] pt-16 pb-12 border-t border-forest-900/30">
+    <footer className="bg-forest-950 text-white pt-14 pb-8 border-t border-forest-900/60 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-forest-900/40">
           {/* Col 1: About & Slogan */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-forest-800 text-white flex items-center justify-center shadow-sm">
-                <Leaf className="w-5 h-5 text-forest-200" strokeWidth={1.75} />
-              </div>
-              <div>
-                <span className="text-lg font-bold text-white tracking-tight">BIOCHAR BÃ CHÈ ĐẤT TỔ</span>
-                <span className="block text-xs text-forest-300 font-semibold uppercase">
-                  Mô hình Kinh tế Tuần hoàn Khép kín
-                </span>
-              </div>
+              <img 
+                src="/images/logo_biochar_phutho_light.png" 
+                alt="Than sinh học (Biochar) từ bã chè" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
-            <p className="text-xs sm:text-sm text-charcoal-300 leading-relaxed pr-4">
+            <p className="text-xs sm:text-sm text-charcoal-300 leading-relaxed pr-4 text-pretty">
               Dự án khởi nghiệp của sinh viên Đại học Hùng Vương, Phú Thọ: Chuyển hóa hàng chục nghìn tấn bã chè phế phẩm thành than sinh học xốp vi mô cải tạo đất thoái hóa, phân vi sinh bản địa và than hoạt tính lọc nước sạch.
             </p>
             <div className="p-3.5 rounded-2xl bg-forest-950/60 border border-forest-900/60 text-xs text-charcoal-200 space-y-1">
