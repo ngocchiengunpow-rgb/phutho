@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Star, Check, Filter, ShieldCheck, Truck, ArrowRight, Sparkles } from 'lucide-react';
 import { products } from '../data/products';
 
 export default function ShopPage({ onSelectProduct, onAddToCart }) {
@@ -32,11 +31,10 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
       {/* Header Banner */}
       <div className="bg-forest-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl border border-forest-900">
         <div className="relative z-10 max-w-2xl space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" strokeWidth={1.75} />
+          <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
             Vật Tư Xanh Khép Vòng Kinh Tế Phú Thọ
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Cửa Hàng Sinh Thái Biochar Bã Chè
           </h1>
           <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
@@ -111,10 +109,8 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
                   <span className="font-bold text-forest-800 uppercase tracking-wider">
                     {product.categoryName}
                   </span>
-                  <div className="flex items-center gap-1 text-amber-500 font-semibold">
-                    <Star className="w-3.5 h-3.5 fill-current" />
-                    <span className="font-mono text-charcoal-800">{product.rating}</span>
-                    <span className="text-charcoal-400">({product.reviewsCount})</span>
+                  <div className="text-charcoal-500 text-[11px] font-medium">
+                    Đánh giá {product.rating}/5 ({product.reviewsCount})
                   </div>
                 </div>
 
@@ -133,7 +129,7 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
                 <ul className="space-y-1 pt-1 text-xs text-charcoal-600">
                   {product.highlightFeatures?.slice(0, 2).map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-forest-700 shrink-0 mt-0.5" strokeWidth={2} />
+                      <span className="text-forest-700 font-bold">•</span>
                       <span className="line-clamp-1">{feat}</span>
                     </li>
                   ))}
@@ -144,7 +140,7 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
               <div className="pt-4 border-t border-chalk-200 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] text-charcoal-400 block">Đơn giá ({product.priceUnit})</span>
-                  <span className="text-xl font-black font-mono text-forest-950 tabular-nums">
+                  <span className="text-xl font-bold text-forest-950 tabular-nums">
                     {product.basePrice.toLocaleString()} đ
                   </span>
                 </div>
@@ -153,7 +149,7 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
                   <button
                     type="button"
                     onClick={() => onSelectProduct(product)}
-                    className="px-3.5 py-2 rounded-full border border-chalk-300 hover:bg-chalk-50 text-charcoal-800 text-xs font-bold transition btn-press"
+                    className="px-4 py-2 rounded-full border border-chalk-300 hover:bg-chalk-50 text-charcoal-800 text-xs font-semibold transition btn-press"
                   >
                     Chi Tiết
                   </button>
@@ -168,9 +164,8 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
                       quantity: 1,
                       image: product.image
                     })}
-                    className="px-3.5 py-2 rounded-full bg-forest-950 hover:bg-forest-900 text-white text-xs font-bold shadow-sm transition flex items-center gap-1 btn-press"
+                    className="px-4 py-2 rounded-full bg-forest-950 hover:bg-forest-900 text-white text-xs font-semibold shadow-sm transition btn-press"
                   >
-                    <ShoppingBag className="w-3.5 h-3.5" strokeWidth={1.75} />
                     Thêm
                   </button>
                 </div>
@@ -182,34 +177,25 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
 
       {/* Info strip */}
       <div className="bg-white rounded-3xl p-6 sm:p-8 border border-forest-950/5 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-charcoal-600">
-        <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center shrink-0">
-            <Truck className="w-5 h-5" strokeWidth={1.75} />
-          </div>
-          <div>
-            <span className="font-bold text-forest-950 text-sm block">Vận chuyển chuyên nghiệp</span>
-            <span className="text-charcoal-500">Giao hàng tận nơi toàn tỉnh Phú Thọ và các tỉnh Trung du. Đơn hàng từ 1 Tấn hỗ trợ xe tải vận chuyển tận nơi.</span>
-          </div>
+        <div className="p-4 rounded-2xl bg-[#faf8f5] space-y-1.5 border border-chalk-200">
+          <span className="font-bold text-forest-950 text-sm block">Vận chuyển chuyên nghiệp</span>
+          <p className="text-charcoal-500 leading-relaxed">
+            Giao hàng tận nơi toàn tỉnh Phú Thọ và các tỉnh Trung du. Đơn hàng từ 1 Tấn hỗ trợ xe tải vận chuyển tận nơi.
+          </p>
         </div>
 
-        <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center shrink-0">
-            <ShieldCheck className="w-5 h-5" strokeWidth={1.75} />
-          </div>
-          <div>
-            <span className="font-bold text-forest-950 text-sm block">Cam kết chất lượng</span>
-            <span className="text-charcoal-500">100% nguyên liệu sinh khối bã chè tự nhiên, kiểm nghiệm độ kiềm pH và vi sinh vật đối kháng định kỳ.</span>
-          </div>
+        <div className="p-4 rounded-2xl bg-[#faf8f5] space-y-1.5 border border-chalk-200">
+          <span className="font-bold text-forest-950 text-sm block">Cam kết chất lượng</span>
+          <p className="text-charcoal-500 leading-relaxed">
+            100% nguyên liệu sinh khối bã chè tự nhiên, kiểm nghiệm độ kiềm pH và vi sinh vật đối kháng định kỳ.
+          </p>
         </div>
 
-        <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center shrink-0">
-            <Sparkles className="w-5 h-5 text-forest-700" strokeWidth={1.75} />
-          </div>
-          <div>
-            <span className="font-bold text-forest-950 text-sm block">Hỗ trợ kỹ thuật thực địa</span>
-            <span className="text-charcoal-500">Đội ngũ sinh viên & cố vấn khoa học đồng hành hướng dẫn kỹ thuật bón lót, tư vấn liều lượng phù hợp từng chất đất.</span>
-          </div>
+        <div className="p-4 rounded-2xl bg-[#faf8f5] space-y-1.5 border border-chalk-200">
+          <span className="font-bold text-forest-950 text-sm block">Hỗ trợ kỹ thuật thực địa</span>
+          <p className="text-charcoal-500 leading-relaxed">
+            Đội ngũ sinh viên và cố vấn khoa học đồng hành hướng dẫn kỹ thuật bón lót, tư vấn liều lượng phù hợp từng chất đất.
+          </p>
         </div>
       </div>
     </div>

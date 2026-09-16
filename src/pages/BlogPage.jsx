@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Calendar, User, Clock, ArrowRight, ArrowLeft, Leaf } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { blogArticles } from '../data/blog';
 
 export default function BlogPage() {
@@ -10,7 +10,7 @@ export default function BlogPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
         <button
           onClick={() => setSelectedArticle(null)}
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-forest-800 hover:underline"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-forest-800 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" strokeWidth={2} /> Quay lại danh sách cẩm nang
         </button>
@@ -20,20 +20,16 @@ export default function BlogPage() {
           <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-2.5 py-1 rounded-full border border-forest-200">
             {selectedArticle.category}
           </span>
-          <h1 className="text-2xl sm:text-4xl font-black text-forest-950 leading-tight tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-bold text-forest-950 leading-tight tracking-tight">
             {selectedArticle.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-4 text-xs text-charcoal-400 pt-2 border-b border-chalk-200 pb-4 font-mono">
-            <span className="flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> {selectedArticle.date}
-            </span>
-            <span className="flex items-center gap-1">
-              <User className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> {selectedArticle.author}
-            </span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> {selectedArticle.readTime}
-            </span>
+          <div className="flex flex-wrap items-center gap-3 text-xs text-charcoal-400 pt-2 border-b border-chalk-200 pb-4">
+            <span>{selectedArticle.date}</span>
+            <span>•</span>
+            <span>Tác giả: {selectedArticle.author}</span>
+            <span>•</span>
+            <span>{selectedArticle.readTime}</span>
           </div>
         </div>
 
@@ -79,11 +75,10 @@ export default function BlogPage() {
       {/* Header */}
       <div className="bg-forest-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl border border-forest-900">
         <div className="relative z-10 max-w-3xl space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
-            <BookOpen className="w-3.5 h-3.5 text-forest-300" strokeWidth={1.75} />
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
             CẨM NANG NÔNG NGHIỆP TUẦN HOÀN
           </span>
-          <h1 className="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight">
             Kiến Thức Cải Tạo Đất & Công Nghệ Than Sinh Học
           </h1>
           <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
@@ -124,10 +119,10 @@ export default function BlogPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-chalk-200 flex items-center justify-between text-xs text-charcoal-400 font-mono">
+              <div className="pt-4 border-t border-chalk-200 flex items-center justify-between text-xs text-charcoal-400">
                 <span>{art.date}</span>
-                <span className="text-forest-800 font-bold font-sans flex items-center gap-1 group-hover:translate-x-0.5 transition">
-                  Đọc tiếp <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                <span className="text-forest-800 font-bold hover:underline transition">
+                  Đọc tiếp →
                 </span>
               </div>
             </div>

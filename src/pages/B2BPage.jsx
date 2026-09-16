@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import { 
-  Building2, Factory, Handshake, CheckCircle2, ShieldCheck, 
-  ArrowRight, Phone, Mail, FileText, Send, Sparkles, Truck, Droplets 
-} from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function B2BPage() {
@@ -35,11 +31,10 @@ export default function B2BPage() {
       {/* Hero Header */}
       <div className="bg-forest-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl border border-forest-900">
         <div className="relative z-10 max-w-3xl space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
-            <Handshake className="w-3.5 h-3.5 text-amber-400" strokeWidth={1.75} />
+          <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
             HỢP TÁC DOANH NGHIỆP & HỢP TÁC XÃ
           </span>
-          <h1 className="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight">
             Liên Kết Phát Triển Kinh Tế Xanh Phú Thọ
           </h1>
           <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
@@ -53,9 +48,6 @@ export default function B2BPage() {
         {/* Program 1 */}
         <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-md border border-forest-950/5 flex flex-col justify-between space-y-6">
           <div className="space-y-3">
-            <div className="w-11 h-11 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center font-bold">
-              <Factory className="w-5 h-5 text-forest-700" strokeWidth={1.75} />
-            </div>
             <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800 block">Dành cho Nhà Máy Chè</span>
             <h3 className="text-lg font-bold text-forest-950 leading-snug">
               Chương Trình "Đổi Phế Phẩm Lấy Vật Tư"
@@ -66,15 +58,15 @@ export default function B2BPage() {
 
             <ul className="space-y-2 text-xs text-charcoal-600 pt-3 border-t border-chalk-200">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Tiết kiệm 500k đến 1tr đồng/tấn phí bãi rác</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Ký hợp đồng bao tiêu phế phẩm dài hạn</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Hỗ trợ hồ sơ xanh đạt chuẩn OCOP & ESG</span>
               </li>
             </ul>
@@ -90,9 +82,6 @@ export default function B2BPage() {
         {/* Program 2 */}
         <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-md border border-forest-950/5 flex flex-col justify-between space-y-6">
           <div className="space-y-3">
-            <div className="w-11 h-11 rounded-2xl bg-amber-50 text-amber-800 flex items-center justify-center font-bold">
-              <Truck className="w-5 h-5 text-amber-700" strokeWidth={1.75} />
-            </div>
             <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block">Dành cho HTX & Trang Trại</span>
             <h3 className="text-lg font-bold text-forest-950 leading-snug">
               Cung Ứng Biochar & Phân Vi Sinh Theo Tấn
@@ -103,15 +92,15 @@ export default function B2BPage() {
 
             <ul className="space-y-2 text-xs text-charcoal-600 pt-3 border-t border-chalk-200">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Giá sỉ chỉ từ 9.500.000đ/tấn Biochar</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Hỗ trợ xét nghiệm pH đất đồi miễn phí</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Cam kết giao hàng đúng vụ mùa bón lót</span>
               </li>
             </ul>
@@ -127,9 +116,6 @@ export default function B2BPage() {
         {/* Program 3 */}
         <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-md border border-forest-950/5 flex flex-col justify-between space-y-6">
           <div className="space-y-3">
-            <div className="w-11 h-11 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center font-bold">
-              <Droplets className="w-5 h-5 text-forest-700" strokeWidth={1.75} />
-            </div>
             <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800 block">Dành cho 7 KCN Phú Thọ</span>
             <h3 className="text-lg font-bold text-forest-950 leading-snug">
               Than Hoạt Tính Lọc Nước Thải Giá Rẻ
@@ -140,23 +126,23 @@ export default function B2BPage() {
 
             <ul className="space-y-2 text-xs text-charcoal-600 pt-3 border-t border-chalk-200">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Giá chỉ 12.000 đến 15.000đ/kg (rẻ bằng 1/3)</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
+                <span className="text-forest-700 font-bold">•</span>
                 <span>Hấp thụ ion kim loại nặng và màu nước</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" strokeWidth={1.75} />
-                <span>Hóa đơn VAT và chứng nhận kỹ thuật đầy đủ</span>
+                <span className="text-forest-700 font-bold">•</span>
+                <span>Có giấy kiểm định hàm lượng tro & lưu huỳnh</span>
               </li>
             </ul>
           </div>
 
           <div className="pt-4 border-t border-chalk-200">
             <span className="text-[11px] font-bold text-forest-800 bg-forest-50 px-3 py-1 rounded-full block text-center border border-forest-200">
-              Rẻ hơn 60% than đá nhập khẩu
+              Rẻ bằng 1/3 than hoạt tính gáo dừa
             </span>
           </div>
         </div>
@@ -166,7 +152,7 @@ export default function B2BPage() {
       <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-forest-950/5">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="text-center space-y-1">
-            <h2 className="text-2xl sm:text-3xl font-black text-forest-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight">
               Đăng Ký Hợp Tác Hoặc Yêu Cầu Báo Giá B2B
             </h2>
             <p className="text-charcoal-500 text-xs sm:text-sm">
@@ -176,19 +162,19 @@ export default function B2BPage() {
 
           {formSubmitted ? (
             <div className="bg-forest-50 rounded-2xl p-8 border border-forest-200 text-center space-y-4 animate-fadeIn">
-              <div className="w-14 h-14 bg-forest-900 text-white rounded-full flex items-center justify-center mx-auto shadow-md">
-                <CheckCircle2 className="w-8 h-8 text-forest-300" strokeWidth={1.75} />
-              </div>
-              <h3 className="text-lg font-bold text-forest-950">Đăng Ký Thành Công!</h3>
+              <span className="inline-block px-3 py-1 rounded-full bg-forest-100 text-forest-800 text-xs font-bold uppercase tracking-wider">
+                Đăng Ký Thành Công
+              </span>
+              <h3 className="text-xl font-bold text-forest-950">Cảm Ơn Đơn Vị {companyName}</h3>
               <p className="text-xs sm:text-sm text-charcoal-600 max-w-md mx-auto">
-                Cảm ơn <strong>{companyName}</strong> ({contactName}, {phone}) đã gửi yêu cầu. Chúng tôi sẽ liên hệ lại ngay để thảo luận phương án hợp tác tối ưu nhất.
+                Chúng tôi đã ghi nhận yêu cầu từ <strong>{contactName}</strong> ({phone}). Trưởng nhóm Mai Lan sẽ liên hệ trực tiếp trong thời gian sớm nhất.
               </p>
               <div className="pt-2">
                 <a
                   href={`https://zalo.me/0964135205?text=${encodeURIComponent(`Xin chào Mai Lan, tôi vừa gửi yêu cầu hợp tác B2B từ đơn vị: ${companyName}. Số điện thoại: ${phone}.`)}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-xs shadow-md btn-press"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white font-semibold text-xs shadow-sm btn-press"
                 >
                   Nhắn Zalo Với Trưởng Nhóm Ngay
                 </a>
@@ -298,9 +284,8 @@ export default function B2BPage() {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2 btn-press"
+                className="w-full py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-semibold text-sm shadow-md transition btn-press"
               >
-                <Send className="w-4 h-4" strokeWidth={1.75} />
                 Gửi Yêu Cầu Hợp Tác B2B
               </button>
             </form>
@@ -308,15 +293,13 @@ export default function B2BPage() {
 
           {/* Direct Hotline Box */}
           <div className="pt-6 border-t border-chalk-200 flex flex-col sm:flex-row items-center justify-between text-xs text-charcoal-500 gap-3">
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-forest-700" strokeWidth={1.75} />
-              <span>Trao đổi trực tiếp với Trưởng nhóm:</span>
+            <div>
+              <span>Trao đổi trực tiếp với Trưởng nhóm: </span>
               <a href="tel:0964135205" className="text-forest-950 font-bold hover:underline">
                 0964.135.205 (Nguyễn Ngọc Mai Lan)
               </a>
             </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-forest-700" strokeWidth={1.75} />
+            <div>
               <span>Email: nguyenngocmailan.biochar@gmail.com</span>
             </div>
           </div>

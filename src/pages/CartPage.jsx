@@ -84,11 +84,11 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
 
           <div className="space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-forest-800">ĐẶT HÀNG THÀNH CÔNG</span>
-            <h2 className="text-3xl font-black text-forest-950 tracking-tight">
+            <h2 className="text-3xl font-bold text-forest-950 tracking-tight">
               Cảm Ơn Bạn Đã Đồng Hành Cùng Nông Nghiệp Xanh
             </h2>
             <p className="text-xs sm:text-sm text-charcoal-500">
-              Mã đơn hàng: <strong className="font-mono text-forest-950 text-base">{submittedOrderDetails.orderId}</strong>
+              Mã đơn hàng: <strong className="text-forest-950 text-base">{submittedOrderDetails.orderId}</strong>
             </p>
           </div>
 
@@ -108,16 +108,15 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
                 {submittedOrderDetails.paymentMethod === 'cod' ? 'Thanh toán tiền mặt khi nhận hàng (COD)' : 'Chuyển khoản VietQR'}
               </span>
             </div>
-            <div className="flex justify-between pt-2 text-base font-black text-forest-950">
+            <div className="flex justify-between pt-2 text-base font-bold text-forest-950">
               <span>Tổng thanh toán:</span>
-              <span className="font-mono text-forest-950 tabular-nums">{submittedOrderDetails.finalTotal.toLocaleString()} đ</span>
+              <span className="text-forest-950 tabular-nums">{submittedOrderDetails.finalTotal.toLocaleString()} đ</span>
             </div>
           </div>
 
           {submittedOrderDetails.paymentMethod === 'vietqr' && (
             <div className="p-6 rounded-2xl bg-forest-50/60 border border-forest-200 space-y-4">
-              <div className="text-xs font-bold text-forest-950 uppercase flex items-center justify-center gap-1.5">
-                <QrCode className="w-4 h-4 text-forest-800" strokeWidth={1.75} />
+              <div className="text-xs font-bold text-forest-950 uppercase text-center">
                 MÃ VIETQR THANH TOÁN TỰ ĐỘNG
               </div>
               <img
@@ -186,7 +185,7 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
           >
             <ArrowLeft className="w-3.5 h-3.5" strokeWidth={2} /> Quay lại cửa hàng
           </button>
-          <h1 className="text-2xl sm:text-3xl font-black text-forest-950 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight">
             Giỏ Hàng & Thanh Toán ({cart.length} sản phẩm)
           </h1>
         </div>
@@ -218,7 +217,7 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
                   <span className="text-[11px] text-charcoal-500 block truncate">
                     Quy cách: {item.variantLabel}
                   </span>
-                  <div className="text-xs sm:text-sm font-black font-mono text-forest-900 mt-1 tabular-nums">
+                  <div className="text-xs sm:text-sm font-bold text-forest-900 mt-1 tabular-nums">
                     {item.price.toLocaleString()} đ
                   </div>
                 </div>
@@ -231,7 +230,7 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
                   >
                     -
                   </button>
-                  <span className="px-2 py-1 text-xs font-bold font-mono text-charcoal-900 w-7 text-center tabular-nums">
+                  <span className="px-2 py-1 text-xs font-bold text-charcoal-900 w-7 text-center tabular-nums">
                     {item.quantity}
                   </span>
                   <button
@@ -257,18 +256,17 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
           <div className="bg-white rounded-2xl p-4 shadow-sm border border-forest-950/5">
             <form onSubmit={handleApplyCoupon} className="flex gap-2">
               <div className="relative flex-1">
-                <Tag className="w-4 h-4 text-charcoal-400 absolute left-3.5 top-3" strokeWidth={1.75} />
                 <input
                   type="text"
                   placeholder="Mã giảm giá (VD: KHUYENCONG2026)"
                   value={couponCode}
                   onChange={(e) => setCouponCode(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#faf8f5] border border-chalk-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-800 font-mono uppercase"
+                  className="w-full px-3.5 py-2 text-xs sm:text-sm bg-[#faf8f5] border border-chalk-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-forest-800 uppercase"
                 />
               </div>
               <button
                 type="submit"
-                className="px-4 py-2 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-xs sm:text-sm transition btn-press"
+                className="px-4 py-2 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-semibold text-xs sm:text-sm transition btn-press"
               >
                 Áp Dụng
               </button>
@@ -422,30 +420,29 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
               <div className="pt-3 border-t border-chalk-200 space-y-1 text-xs">
                 <div className="flex justify-between text-charcoal-500">
                   <span>Tạm tính:</span>
-                  <span className="font-mono tabular-nums">{subtotal.toLocaleString()} đ</span>
+                  <span className="tabular-nums">{subtotal.toLocaleString()} đ</span>
                 </div>
                 {couponDiscount > 0 && (
                   <div className="flex justify-between text-forest-800 font-semibold">
                     <span>Mã giảm giá:</span>
-                    <span className="font-mono tabular-nums">-{couponDiscount.toLocaleString()} đ</span>
+                    <span className="tabular-nums">-{couponDiscount.toLocaleString()} đ</span>
                   </div>
                 )}
                 <div className="flex justify-between text-charcoal-500">
                   <span>Phí vận chuyển:</span>
                   <span>{shippingFee === 0 ? 'Miễn phí' : `${shippingFee.toLocaleString()} đ`}</span>
                 </div>
-                <div className="flex justify-between text-base font-black text-forest-950 pt-2 border-t border-chalk-200">
+                <div className="flex justify-between text-base font-bold text-forest-950 pt-2 border-t border-chalk-200">
                   <span>Tổng tiền thanh toán:</span>
-                  <span className="font-mono text-forest-950 tabular-nums">{finalTotal.toLocaleString()} đ</span>
+                  <span className="text-forest-950 tabular-nums">{finalTotal.toLocaleString()} đ</span>
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2 btn-press"
+                className="w-full py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-sm shadow-md transition flex items-center justify-center btn-press"
               >
-                <CheckCircle2 className="w-4 h-4 text-forest-300" strokeWidth={2} />
-                Xác Nhận Đặt Hàng
+                Xác Nhận Đặt Hàng Ngay
               </button>
 
               <div className="text-[11px] text-center text-charcoal-400 flex items-center justify-center gap-1">

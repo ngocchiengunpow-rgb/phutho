@@ -56,8 +56,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        sans: ['"Be Vietnam Pro"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         '2xl': '1rem',

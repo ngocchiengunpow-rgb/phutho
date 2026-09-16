@@ -228,7 +228,7 @@ export default function App() {
           title="Gọi Hotline 0964.135.205"
         >
           <Phone className="w-4 h-4 text-forest-300" strokeWidth={1.75} />
-          <span className="font-mono font-bold">0964.135.205</span>
+          <span className="font-bold">0964.135.205</span>
         </a>
       </div>
 

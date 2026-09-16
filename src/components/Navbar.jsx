@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, Phone, Leaf, Sparkles, ArrowRight } from 'lucide-react';
+import { ShoppingBag, Menu, X, Leaf } from 'lucide-react';
 
 export default function Navbar({ activePage, setActivePage, cartCount, openCart }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,21 +26,19 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
       {/* Top micro-bar */}
       <div className="bg-forest-950 text-forest-100 text-xs py-1.5 px-4 hidden md:block border-b border-forest-900/40">
         <div className="max-w-7xl mx-auto flex justify-between items-center tracking-tight">
-          <div className="flex items-center space-x-3">
-            <span className="flex items-center gap-1.5 font-medium">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" strokeWidth={1.75} />
-              Ý Tưởng Khởi Nghiệp Sinh Viên Hùng Vương 2026
+          <div className="flex items-center space-x-3 text-xs">
+            <span className="font-medium text-forest-200">
+              Dự Án Khởi Nghiệp Sinh Viên ĐH Hùng Vương 2026
             </span>
             <span className="text-forest-700">•</span>
-            <span className="text-forest-200">Kinh tế tuần hoàn: Từ Đất Tổ, Trả Lại Đất Tổ</span>
+            <span className="text-forest-300">Kinh tế tuần hoàn từ bã chè Phú Thọ</span>
           </div>
-          <div className="flex items-center space-x-5">
-            <a href="tel:0964135205" className="flex items-center gap-1.5 hover:text-white transition">
-              <Phone className="w-3 h-3 text-forest-300" strokeWidth={1.75} />
-              <span>Hotline Trưởng nhóm: <strong className="text-white font-semibold">0964.135.205</strong></span>
+          <div className="flex items-center space-x-4 text-xs">
+            <a href="tel:0964135205" className="hover:text-white transition">
+              Hotline: <strong className="text-white font-semibold">0964.135.205</strong>
             </a>
             <span className="text-forest-700">•</span>
-            <span className="text-forest-300">Đại học Hùng Vương, Phú Thọ</span>
+            <span className="text-forest-300">ĐH Hùng Vương</span>
           </div>
         </div>
       </div>
@@ -58,7 +56,7 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-lg font-black tracking-tight text-forest-950 font-sans">BIOCHAR</span>
+                <span className="text-lg font-bold tracking-tight text-forest-950 font-sans">BIOCHAR</span>
                 <span className="text-[10px] uppercase px-1.5 py-0.5 rounded-full bg-forest-100 text-forest-800 font-bold border border-forest-200">
                   Đất Tổ
                 </span>
@@ -144,9 +142,8 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
           <div className="pt-3 border-t border-forest-950/10 space-y-2">
             <a
               href="tel:0964135205"
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-forest-50 text-forest-950 font-bold text-xs"
+              className="block text-center w-full py-2.5 rounded-full bg-forest-50 text-forest-950 font-bold text-xs"
             >
-              <Phone className="w-3.5 h-3.5 text-forest-800" strokeWidth={1.75} />
               Hotline Trưởng nhóm: 0964.135.205
             </a>
             <button

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Phone, Mail, MapPin, Award, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 
 export default function Footer({ setActivePage }) {
   const handleNav = (page) => {
@@ -18,7 +18,7 @@ export default function Footer({ setActivePage }) {
                 <Leaf className="w-5 h-5 text-forest-200" strokeWidth={1.75} />
               </div>
               <div>
-                <span className="text-lg font-black text-white tracking-tight">BIOCHAR BÃ CHÈ ĐẤT TỔ</span>
+                <span className="text-lg font-bold text-white tracking-tight">BIOCHAR BÃ CHÈ ĐẤT TỔ</span>
                 <span className="block text-xs text-forest-300 font-semibold uppercase">
                   Mô hình Kinh tế Tuần hoàn Khép kín
                 </span>
@@ -28,8 +28,7 @@ export default function Footer({ setActivePage }) {
               Dự án khởi nghiệp của sinh viên Đại học Hùng Vương, Phú Thọ: Chuyển hóa hàng chục nghìn tấn bã chè phế phẩm thành than sinh học xốp vi mô cải tạo đất thoái hóa, phân vi sinh bản địa và than hoạt tính lọc nước sạch.
             </p>
             <div className="p-3.5 rounded-2xl bg-forest-950/60 border border-forest-900/60 text-xs text-charcoal-200 space-y-1">
-              <div className="flex items-center gap-2 text-amber-400 font-bold">
-                <Award className="w-4 h-4" strokeWidth={1.75} />
+              <div className="text-forest-300 font-bold">
                 Ý TƯỞNG KHỞI NGHIỆP SINH VIÊN HÙNG VƯƠNG 2026
               </div>
               <p className="text-charcoal-400">
@@ -88,30 +87,27 @@ export default function Footer({ setActivePage }) {
           {/* Col 4: Contact & Leader Info */}
           <div className="space-y-3">
             <h4 className="text-white font-bold text-xs uppercase tracking-wider">Thông Tin Liên Hệ</h4>
-            <div className="space-y-2.5 text-xs text-charcoal-200">
-              <div className="flex items-start gap-2">
-                <ShieldCheck className="w-4 h-4 text-forest-300 shrink-0 mt-0.5" strokeWidth={1.75} />
-                <div>
-                  <span className="font-semibold text-white">Trưởng nhóm: Nguyễn Ngọc Mai Lan</span>
-                  <p className="text-charcoal-400">Lớp K22 Kế Toán B, ĐH Hùng Vương</p>
-                </div>
+            <div className="space-y-2 text-xs text-charcoal-200">
+              <div>
+                <span className="font-semibold text-white">Trưởng nhóm: Nguyễn Ngọc Mai Lan</span>
+                <p className="text-charcoal-400">Lớp K22 Kế Toán B, ĐH Hùng Vương</p>
               </div>
 
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-forest-300 shrink-0" strokeWidth={1.75} />
+              <div>
+                <span className="text-charcoal-400">Hotline: </span>
                 <a href="tel:0964135205" className="text-forest-200 font-bold hover:underline">
                   0964.135.205
                 </a>
               </div>
 
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-forest-300 shrink-0" strokeWidth={1.75} />
+              <div>
+                <span className="text-charcoal-400">Email: </span>
                 <span className="text-charcoal-300 break-all">nguyenngocmailan.biochar@gmail.com</span>
               </div>
 
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-forest-300 shrink-0 mt-0.5" strokeWidth={1.75} />
-                <span>Xưởng thực nghiệm: CCN Giáp Lai, Thanh Sơn, Phú Thọ</span>
+              <div>
+                <span className="text-charcoal-400">Xưởng SX: </span>
+                <span>CCN Giáp Lai, Thanh Sơn, Phú Thọ</span>
               </div>
             </div>
           </div>

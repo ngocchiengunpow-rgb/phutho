@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import { 
-  Phone, Mail, MapPin, Send, MessageSquare, CheckCircle2, 
-  Clock, ShieldCheck, Heart, Sparkles 
-} from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ContactPage() {
@@ -31,11 +27,10 @@ export default function ContactPage() {
       {/* Header */}
       <div className="bg-forest-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl border border-forest-900">
         <div className="relative z-10 max-w-3xl space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-800/80 text-amber-400 text-xs font-semibold border border-forest-700/60">
-            <Sparkles className="w-3.5 h-3.5" strokeWidth={1.75} />
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-forest-800/80 text-forest-200 text-xs font-semibold border border-forest-700/60">
             KẾT NỐI VỚI CHÚNG TÔI
           </span>
-          <h1 className="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight">
             Liên Hệ Ban Điều Hành Dự Án
           </h1>
           <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
@@ -59,33 +54,23 @@ export default function ContactPage() {
                 className="w-16 h-16 rounded-full object-cover border-2 border-forest-700 shadow-md"
               />
               <div>
-                <h3 className="text-base sm:text-lg font-black text-forest-950">Nguyễn Ngọc Mai Lan</h3>
+                <h3 className="text-base sm:text-lg font-bold text-forest-950">Nguyễn Ngọc Mai Lan</h3>
                 <span className="text-xs font-semibold text-forest-700 block">Trưởng Nhóm Sáng Lập</span>
                 <span className="text-[11px] text-charcoal-400">Lớp K22 Kế Toán B, ĐH Hùng Vương</span>
               </div>
             </div>
 
             <div className="space-y-3 text-xs text-charcoal-700">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-forest-50 text-forest-800 flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4" strokeWidth={1.75} />
-                </div>
-                <div>
-                  <span className="text-charcoal-400 text-[11px] block">Hotline / Zalo:</span>
-                  <a href="tel:0964135205" className="font-bold text-forest-950 hover:underline">
-                    0964.135.205
-                  </a>
-                </div>
+              <div>
+                <span className="text-charcoal-400 text-[11px] block">Hotline / Zalo:</span>
+                <a href="tel:0964135205" className="font-bold text-forest-950 hover:underline text-sm">
+                  0964.135.205
+                </a>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-forest-50 text-forest-800 flex items-center justify-center shrink-0">
-                  <Mail className="w-4 h-4" strokeWidth={1.75} />
-                </div>
-                <div>
-                  <span className="text-charcoal-400 text-[11px] block">Email chính thức:</span>
-                  <span className="font-semibold text-charcoal-900 break-all">nguyenngocmailan.biochar@gmail.com</span>
-                </div>
+              <div>
+                <span className="text-charcoal-400 text-[11px] block">Email chính thức:</span>
+                <span className="font-semibold text-charcoal-900 break-all">nguyenngocmailan.biochar@gmail.com</span>
               </div>
             </div>
 
@@ -96,27 +81,25 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="w-full py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition btn-press"
               >
-                <MessageSquare className="w-4 h-4" strokeWidth={1.75} />
-                Mở Chat Zalo Trực Tiếp
+                Nhắn tin Zalo trực tiếp: 0964.135.205
               </a>
             </div>
           </div>
 
           {/* Locations */}
           <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-md border border-forest-950/5 space-y-4 text-xs">
-            <h4 className="font-bold text-forest-950 flex items-center gap-2 text-sm">
-              <MapPin className="w-4 h-4 text-forest-700" strokeWidth={1.75} />
+            <h4 className="font-bold text-forest-950 text-sm">
               Địa Điểm Hoạt Động
             </h4>
 
             <div className="space-y-3 text-charcoal-600">
-              <div className="p-3 rounded-2xl bg-[#faf8f5] border border-chalk-200">
-                <strong className="text-forest-950 block mb-0.5">Xưởng sản xuất & Kho trữ nguyên liệu:</strong>
+              <div className="p-3.5 rounded-2xl bg-[#faf8f5] border border-chalk-200">
+                <strong className="text-forest-950 block mb-0.5 font-bold">Xưởng sản xuất & Kho trữ nguyên liệu:</strong>
                 <span>Cụm Công nghiệp Giáp Lai, Huyện Thanh Sơn, Tỉnh Phú Thọ.</span>
               </div>
 
-              <div className="p-3 rounded-2xl bg-[#faf8f5] border border-chalk-200">
-                <strong className="text-forest-950 block mb-0.5">Văn phòng Dự án & Trung tâm R&D:</strong>
+              <div className="p-3.5 rounded-2xl bg-[#faf8f5] border border-chalk-200">
+                <strong className="text-forest-950 block mb-0.5 font-bold">Văn phòng Dự án & Trung tâm R&D:</strong>
                 <span>Trung tâm Khởi nghiệp & Đổi mới Sáng tạo, Trường Đại học Hùng Vương, Phường Nông Trang, TP. Việt Trì, Phú Thọ.</span>
               </div>
             </div>
@@ -127,7 +110,7 @@ export default function ContactPage() {
         <div className="lg:col-span-7">
           <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-forest-950/5 space-y-6">
             <div>
-              <h3 className="text-2xl font-black text-forest-950 tracking-tight">
+              <h3 className="text-2xl font-bold text-forest-950 tracking-tight">
                 Gửi Tin Nhắn Cho Nhóm Dự Án
               </h3>
               <p className="text-xs text-charcoal-500 mt-1">
@@ -137,7 +120,9 @@ export default function ContactPage() {
 
             {submitted ? (
               <div className="p-8 rounded-2xl bg-forest-50 border border-forest-200 text-center space-y-3 animate-fadeIn">
-                <CheckCircle2 className="w-12 h-12 text-forest-700 mx-auto" strokeWidth={1.75} />
+                <div className="w-12 h-12 rounded-full bg-forest-800 text-white font-bold text-xl flex items-center justify-center mx-auto">
+                  ✓
+                </div>
                 <h4 className="font-bold text-forest-950 text-base">Tin nhắn đã được gửi thành công</h4>
                 <p className="text-xs text-charcoal-600">
                   Cảm ơn <strong>{fullName}</strong>. Trưởng nhóm Mai Lan sẽ liên hệ lại qua số điện thoại <strong>{phone}</strong> trong thời gian sớm nhất.
@@ -201,9 +186,8 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-xs sm:text-sm shadow-md transition flex items-center justify-center gap-2 btn-press"
+                  className="w-full py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-xs sm:text-sm shadow-md transition flex items-center justify-center btn-press"
                 >
-                  <Send className="w-4 h-4" strokeWidth={1.75} />
                   Gửi Tin Nhắn Ngay
                 </button>
               </form>

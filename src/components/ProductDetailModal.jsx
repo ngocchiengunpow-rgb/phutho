@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Star, Shield, Truck, Phone, ShoppingBag, Leaf } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function ProductDetailModal({ product, onClose, onAddToCart, onBuyNow }) {
   if (!product) return null;
@@ -67,7 +67,7 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                 <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800 bg-forest-100/80 px-2.5 py-0.5 rounded-full">
                   {product.categoryName}
                 </span>
-                <h2 className="text-2xl font-black text-forest-950 mt-2 tracking-tight">
+                <h2 className="text-2xl font-bold text-forest-950 mt-2 tracking-tight">
                   {product.name}
                 </h2>
                 <p className="text-xs text-charcoal-500 mt-1">
@@ -81,7 +81,7 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                       <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <span className="text-xs font-bold text-charcoal-900 font-mono">{product.rating}</span>
+                  <span className="text-xs font-bold text-charcoal-900">{product.rating}</span>
                   <span className="text-xs text-charcoal-400">({product.reviewsCount} đánh giá thực tế)</span>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                 <div>
                   <span className="text-[11px] text-charcoal-500 block">Đơn giá theo quy cách:</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl sm:text-3xl font-black font-mono text-forest-950 tabular-nums">
+                    <span className="text-2xl sm:text-3xl font-bold text-forest-950 tabular-nums">
                       {selectedVariant.price.toLocaleString()} đ
                     </span>
                     {selectedVariant.priceNote && (
@@ -140,7 +140,7 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                   >
                     -
                   </button>
-                  <span className="px-2 py-2 text-xs font-bold font-mono text-charcoal-900 w-8 text-center tabular-nums">
+                  <span className="px-2 py-2 text-xs font-bold text-charcoal-900 w-8 text-center tabular-nums">
                     {quantity}
                   </span>
                   <button
@@ -155,28 +155,24 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  className="flex-1 py-3 px-4 rounded-full bg-forest-100 hover:bg-forest-200 text-forest-950 font-bold text-xs flex items-center justify-center gap-2 transition btn-press"
+                  className="flex-1 py-3 px-4 rounded-full bg-forest-100 hover:bg-forest-200 text-forest-950 font-semibold text-xs transition btn-press"
                 >
-                  <ShoppingBag className="w-4 h-4 text-forest-900" strokeWidth={1.75} />
                   Thêm Vào Giỏ
                 </button>
 
                 <button
                   type="button"
                   onClick={handleBuyNow}
-                  className="flex-1 py-3 px-4 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-xs flex items-center justify-center gap-2 transition shadow-md shadow-forest-950/15 btn-press"
+                  className="flex-1 py-3 px-4 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-semibold text-xs transition shadow-md shadow-forest-950/15 btn-press"
                 >
                   Mua Ngay
                 </button>
               </div>
 
-              <div className="text-[11px] text-charcoal-500 flex items-center gap-4 pt-1">
-                <span className="flex items-center gap-1">
-                  <Truck className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> Giao hàng toàn quốc
-                </span>
-                <span className="flex items-center gap-1">
-                  <Phone className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> Tư vấn: 0964.135.205
-                </span>
+              <div className="text-[11px] text-charcoal-500 flex items-center gap-3 pt-1">
+                <span>Giao hàng toàn quốc</span>
+                <span>•</span>
+                <span>Tư vấn kỹ thuật: <strong className="text-forest-950 font-semibold">0964.135.205</strong></span>
               </div>
             </div>
           </div>
@@ -216,7 +212,7 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                   {product.specifications?.map((s, idx) => (
                     <div key={idx} className="flex justify-between py-2 px-3 bg-white rounded-xl text-xs border border-forest-950/5">
                       <span className="text-charcoal-500">{s.label}:</span>
-                      <span className="font-bold font-mono text-charcoal-900">{s.value}</span>
+                      <span className="font-semibold text-charcoal-900">{s.value}</span>
                     </div>
                   ))}
                 </div>
