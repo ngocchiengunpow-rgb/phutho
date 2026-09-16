@@ -46,20 +46,7 @@ export const teamMembers = [
   }
 ];
 
-export const advisors = [
-  {
-    name: 'TS. Nguyễn Văn Hưng',
-    title: 'Cố Vấn Khoa Học Nông Nghiệp & Đất',
-    institution: 'Trưởng Bộ môn Nông nghiệp & CNSH, Trường Đại Học Hùng Vương',
-    desc: 'Hỗ trợ kiểm nghiệm chỉ tiêu pH, CEC và công thức phối trộn chủng vi sinh vật bản địa Bacillus, Trichoderma sống trên than sinh học.'
-  },
-  {
-    name: 'ThS. Lê Quang Minh',
-    title: 'Cố Vấn Kỹ Thuật Lò Sinh Khối',
-    institution: 'Chuyên gia Năng lượng Sinh học, Viện KHKT Nông Lâm nghiệp Trung du Miền núi Phía Bắc (NOMAFSI)',
-    desc: 'Tư vấn thiết kế lò nhiệt phân chậm liên tục nội địa, tối ưu hóa dải nhiệt yếm khí 350°C đến 450°C và ống thu hồi khí Syngas sấy khô.'
-  }
-];
+export const advisors = [];
 
 export const startupMetrics = {
   contest: 'Ý TƯỞNG KHỞI NGHIỆP SINH VIÊN HÙNG VƯƠNG 2026',

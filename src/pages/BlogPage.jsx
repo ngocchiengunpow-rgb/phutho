@@ -57,7 +57,7 @@ export default function BlogPage() {
         <div className="p-6 rounded-3xl bg-white border border-forest-950/5 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h4 className="font-bold text-forest-950 text-sm">Bạn cần tư vấn kỹ thuật bón Biochar cho đất của mình?</h4>
-            <p className="text-xs text-charcoal-500">Đội ngũ kỹ sư và giảng viên cố vấn hỗ trợ kiểm tra mẫu đất miễn phí.</p>
+            <p className="text-xs text-charcoal-500 text-pretty">Đội ngũ kỹ thuật của dự án sẵn sàng hỗ trợ kiểm tra mẫu đất miễn&nbsp;phí.</p>
           </div>
           <a
             href="tel:0964135205"

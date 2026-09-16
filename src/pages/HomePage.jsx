@@ -1,6 +1,6 @@
 import React from 'react';
 import { products } from '../data/products';
-import { teamMembers, advisors } from '../data/team';
+import { teamMembers } from '../data/team';
 import BiocharCalculator from '../components/BiocharCalculator';
 
 export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }) {
@@ -31,14 +31,14 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
               </div>
 
               {/* Element 2: Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-forest-950 leading-[1.12]">
-                Than Sinh Học Từ Bã Chè: <br />
-                <span className="text-forest-700 font-semibold">Từ Đất Tổ, Trả Lại Đất Tổ</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-5xl font-bold tracking-tight text-forest-950 leading-[1.18] text-balance">
+                <span className="inline-block">Than Sinh Học Từ Bã&nbsp;Chè:</span>{' '}
+                <span className="inline-block text-forest-700 font-semibold">Từ Đất Tổ, Trả Lại Đất&nbsp;Tổ</span>
               </h1>
 
               {/* Element 3: Subtext */}
-              <p className="text-base sm:text-lg text-charcoal-600 font-normal leading-relaxed max-w-xl">
-                Chuyển hóa hàng chục nghìn tấn bã chè phế phẩm Phú Thọ thành than sinh học cải tạo đất chua, phân vi sinh và than hoạt tính lọc nước.
+              <p className="text-base sm:text-lg text-charcoal-600 font-normal leading-relaxed max-w-xl text-pretty">
+                Chuyển hóa hàng chục nghìn tấn bã chè phế phẩm Phú Thọ thành than sinh học cải tạo đất chua, phân vi sinh và than hoạt tính lọc&nbsp;nước.
               </p>
 
               {/* Element 4: Clean CTAs */}
@@ -399,52 +399,52 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl border border-forest-950/5 overflow-x-auto">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm">
+          <table className="w-full min-w-[780px] text-left border-collapse text-xs sm:text-sm">
             <thead>
               <tr className="bg-[#f3f1eb] text-charcoal-700">
-                <th className="p-4 sm:p-5 font-bold">Tiêu chí so sánh</th>
-                <th className="p-4 sm:p-5 font-bold text-forest-950 bg-forest-100/70 border-x border-forest-300">
-                  Biochar Bã Chè (Đội Hùng Vương)
+                <th className="p-4 sm:p-5 font-bold w-[18%]">Tiêu chí so sánh</th>
+                <th className="p-4 sm:p-5 font-bold text-forest-950 bg-forest-100/70 border-x border-forest-300 w-[24%]">
+                  Biochar Bã Chè (Đội Hùng&nbsp;Vương)
                 </th>
-                <th className="p-4 sm:p-5 font-semibold">Phân vô cơ (NPK)</th>
-                <th className="p-4 sm:p-5 font-semibold">Vôi bột cải tạo đất</th>
-                <th className="p-4 sm:p-5 font-semibold">Biochar Vỏ Trấu</th>
+                <th className="p-4 sm:p-5 font-semibold w-[19%]">Phân vô cơ (NPK)</th>
+                <th className="p-4 sm:p-5 font-semibold w-[19%]">Vôi bột cải tạo đất</th>
+                <th className="p-4 sm:p-5 font-semibold w-[20%]">Biochar Vỏ Trấu</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-chalk-200">
               <tr>
                 <td className="p-4 sm:p-5 font-bold text-charcoal-800">Chi phí nguyên liệu</td>
                 <td className="p-4 sm:p-5 font-bold text-forest-900 bg-forest-50/40 border-x border-forest-200">
-                  Cực thấp (0 đồng nguyên liệu bã chè)
+                  Cực thấp
                 </td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Giá cao và biến động theo dầu mỏ</td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Rẻ nhưng tốn công bón nhiều lần</td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Chi phí vận chuyển vỏ trấu cao</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Giá cao và biến động theo dầu&nbsp;mỏ</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Rẻ nhưng tốn công bón nhiều&nbsp;lần</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Chi phí vận chuyển vỏ trấu&nbsp;cao</td>
               </tr>
               <tr>
                 <td className="p-4 sm:p-5 font-bold text-charcoal-800">Hiệu quả cải tạo đất</td>
                 <td className="p-4 sm:p-5 font-bold text-forest-900 bg-forest-50/40 border-x border-forest-200">
-                  Tác động kép: Nâng pH, giữ ẩm, kháng nấm
+                  Tác động kép: Nâng pH, giữ ẩm, kháng&nbsp;nấm
                 </td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Nhanh nhưng làm chai cứng đất</td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Chỉ hạ chua tức thời, không bù mùn</td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Giữ ẩm tốt, hàm lượng silica cao</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Nhanh nhưng làm chai cứng&nbsp;đất</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Chỉ hạ chua tức thời, không bù&nbsp;mùn</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Giữ ẩm tốt, hàm lượng silica&nbsp;cao</td>
               </tr>
               <tr>
                 <td className="p-4 sm:p-5 font-bold text-charcoal-800">Đa dạng hóa sản phẩm</td>
                 <td className="p-4 sm:p-5 font-bold text-forest-900 bg-forest-50/40 border-x border-forest-200">
-                  Biochar bón đất, Phân vi sinh, Than lọc nước
+                  Biochar bón đất, Phân vi sinh, Than lọc&nbsp;nước
                 </td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Chỉ bổ sung dinh dưỡng vô cơ</td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Chỉ khử chua đất</td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Chủ yếu xuất thô hoặc giá thể</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Chỉ bổ sung dinh dưỡng vô&nbsp;cơ</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Chỉ khử chua&nbsp;đất</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Chủ yếu xuất thô hoặc giá&nbsp;thể</td>
               </tr>
               <tr>
                 <td className="p-4 sm:p-5 font-bold text-charcoal-800">Tín chỉ Carbon & ESG</td>
                 <td className="p-4 sm:p-5 font-bold text-forest-900 bg-forest-50/40 border-x border-forest-200">
-                  Cố định Carbon trên 100 năm, chuẩn Net Zero
+                  Cố định Carbon trên 100 năm, chuẩn Net&nbsp;Zero
                 </td>
-                <td className="p-4 sm:p-5 text-charcoal-500">Phát thải lớn trong sản xuất</td>
+                <td className="p-4 sm:p-5 text-charcoal-500">Phát thải lớn trong sản&nbsp;xuất</td>
                 <td className="p-4 sm:p-5 text-charcoal-500">Không tạo tín chỉ carbon</td>
                 <td className="p-4 sm:p-5 text-charcoal-500">Có bán tín chỉ carbon</td>
               </tr>
@@ -459,8 +459,8 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
           <h2 className="text-3xl font-bold text-forest-950 tracking-tight">
             Đội Ngũ Sáng Lập ĐH Hùng Vương
           </h2>
-          <p className="text-xs sm:text-sm text-charcoal-500 mt-1">
-            Sinh viên K22, K24 và các chuyên gia cố vấn khoa học nông nghiệp đồng hành.
+          <p className="text-xs sm:text-sm text-charcoal-500 mt-1 text-pretty">
+            Sinh viên K22, K24 tâm huyết với nông nghiệp sinh thái tuần hoàn Phú&nbsp;Thọ.
           </p>
         </div>
 
@@ -481,28 +481,11 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
                 <p className="text-[10px] text-charcoal-400 mt-1">{member.classEdu}</p>
               </div>
 
-              <p className="text-[11px] text-charcoal-600 mt-3 pt-3 border-t border-chalk-200 italic leading-relaxed">
+              <p className="text-[11px] text-charcoal-600 mt-3 pt-3 border-t border-chalk-200 italic leading-relaxed text-pretty">
                 "{member.bio}"
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Advisors */}
-        <div className="mt-8 bg-[#f3f1eb] rounded-3xl p-6 sm:p-8 border border-forest-950/5">
-          <div className="text-forest-950 font-bold text-xs uppercase tracking-wider mb-4">
-            BAN GIẢNG VIÊN CỐ VẤN KHOA HỌC & CÔNG NGHỆ
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {advisors.map((adv, idx) => (
-              <div key={idx} className="bg-white p-5 rounded-2xl border border-forest-950/5 shadow-xs">
-                <span className="font-bold text-forest-950 text-sm block">{adv.name}</span>
-                <span className="text-xs font-semibold text-forest-700 block">{adv.title}</span>
-                <span className="text-[11px] text-charcoal-400 block">{adv.institution}</span>
-                <p className="text-xs text-charcoal-600 mt-2 leading-relaxed">{adv.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -510,11 +493,11 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-forest-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-forest-900">
           <div className="space-y-3 max-w-xl">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              Đồng Hành Phát Triển Nông Nghiệp Xanh Phú Thọ
+            <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight text-balance">
+              Đồng Hành Phát Triển Nông Nghiệp Xanh Phú&nbsp;Thọ
             </h3>
-            <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
-              Đăng ký tham gia chương trình <strong>Đổi phế phẩm lấy vật tư</strong> để giải phóng rác thải bã chè miễn phí, hoặc liên hệ nhận mẫu thử nghiệm Biochar cho diện tích vườn chè của bạn.
+            <p className="text-forest-200 text-xs sm:text-sm leading-relaxed text-pretty">
+              Đăng ký tham gia chương trình <strong>Đổi phế phẩm lấy vật tư</strong> để giải phóng rác thải bã chè miễn phí, hoặc liên hệ nhận mẫu thử nghiệm Biochar cho diện tích vườn chè của&nbsp;bạn.
             </p>
           </div>
 

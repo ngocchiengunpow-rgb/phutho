@@ -193,8 +193,8 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
 
         <div className="p-4 rounded-2xl bg-[#faf8f5] space-y-1.5 border border-chalk-200">
           <span className="font-bold text-forest-950 text-sm block">Hỗ trợ kỹ thuật thực địa</span>
-          <p className="text-charcoal-500 leading-relaxed">
-            Đội ngũ sinh viên và cố vấn khoa học đồng hành hướng dẫn kỹ thuật bón lót, tư vấn liều lượng phù hợp từng chất đất.
+          <p className="text-charcoal-500 leading-relaxed text-pretty">
+            Đội ngũ kỹ thuật dự án trực tiếp hướng dẫn kỹ thuật bón lót, tư vấn liều lượng phù hợp từng chất&nbsp;đất.
           </p>
         </div>
       </div>
