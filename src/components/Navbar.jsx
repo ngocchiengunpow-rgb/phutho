@@ -35,9 +35,9 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
             <span className="text-forest-200">Kinh tế tuần hoàn: Từ Đất Tổ, Trả Lại Đất Tổ</span>
           </div>
           <div className="flex items-center space-x-5">
-            <a href="tel:0986728916" className="flex items-center gap-1.5 hover:text-white transition">
+            <a href="tel:0964135205" className="flex items-center gap-1.5 hover:text-white transition">
               <Phone className="w-3 h-3 text-forest-300" strokeWidth={1.75} />
-              <span>Hotline Trưởng nhóm: <strong className="text-white font-semibold">0986.728.916</strong></span>
+              <span>Hotline Trưởng nhóm: <strong className="text-white font-semibold">0964.135.205</strong></span>
             </a>
             <span className="text-forest-700">•</span>
             <span className="text-forest-300">Đại học Hùng Vương, Phú Thọ</span>
@@ -143,11 +143,11 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
           ))}
           <div className="pt-3 border-t border-forest-950/10 space-y-2">
             <a
-              href="tel:0986728916"
+              href="tel:0964135205"
               className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-forest-50 text-forest-950 font-bold text-xs"
             >
               <Phone className="w-3.5 h-3.5 text-forest-800" strokeWidth={1.75} />
-              Hotline Trưởng nhóm: 0986.728.916
+              Hotline Trưởng nhóm: 0964.135.205
             </a>
             <button
               onClick={() => handleNavClick('b2b')}

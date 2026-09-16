@@ -212,7 +212,7 @@ export default function App() {
         )}
 
         <a
-          href="https://zalo.me/0986728916"
+          href="https://zalo.me/0964135205"
           target="_blank"
           rel="noreferrer"
           className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xl transition-transform duration-150 hover:scale-105 btn-press"
@@ -223,12 +223,12 @@ export default function App() {
         </a>
 
         <a
-          href="tel:0986728916"
+          href="tel:0964135205"
           className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-bold text-xs sm:text-sm shadow-xl transition-transform duration-150 hover:scale-105 btn-press"
-          title="Gọi Hotline 0986.728.916"
+          title="Gọi Hotline 0964.135.205"
         >
           <Phone className="w-4 h-4 text-forest-300" strokeWidth={1.75} />
-          <span className="font-mono font-bold">0986.728.916</span>
+          <span className="font-mono font-bold">0964.135.205</span>
         </a>
       </div>
 

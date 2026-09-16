@@ -6,9 +6,9 @@ export const teamMembers = [
     bio: 'Chủ trì nghiên cứu mô hình kinh doanh tuần hoàn, quản trị chi phí và chiến lược kết nối B2B với 60 nhà máy chè địa phương.',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
     contact: {
-      phone: '0986.728.916',
+      phone: '0964.135.205',
       email: 'nguyenngocmailan.biochar@gmail.com',
-      zalo: '0986728916'
+      zalo: '0964135205'
     },
     isLeader: true
   },

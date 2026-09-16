@@ -72,8 +72,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <span className="text-charcoal-400 text-[11px] block">Hotline / Zalo:</span>
-                  <a href="tel:0986728916" className="font-bold text-forest-950 hover:underline">
-                    0986.728.916
+                  <a href="tel:0964135205" className="font-bold text-forest-950 hover:underline">
+                    0964.135.205
                   </a>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
 
             <div className="pt-2">
               <a
-                href="https://zalo.me/0986728916"
+                href="https://zalo.me/0964135205"
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition btn-press"

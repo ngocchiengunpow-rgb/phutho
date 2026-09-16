@@ -73,7 +73,7 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
   };
 
   if (isOrderSubmitted && submittedOrderDetails) {
-    const vietQrUrl = `https://img.vietqr.io/image/MB-0986728916-compact2.png?amount=${submittedOrderDetails.finalTotal}&addInfo=${submittedOrderDetails.orderId}&accountName=NGUYEN%20NGOC%20MAI%20LAN`;
+    const vietQrUrl = `https://img.vietqr.io/image/MB-0964135205-compact2.png?amount=${submittedOrderDetails.finalTotal}&addInfo=${submittedOrderDetails.orderId}&accountName=NGUYEN%20NGOC%20MAI%20LAN`;
 
     return (
       <div className="max-w-3xl mx-auto px-4 py-16">
@@ -127,7 +127,7 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
               />
               <div className="text-xs text-charcoal-600 space-y-0.5">
                 <p>Chủ tài khoản: <strong>NGUYỄN NGỌC MAI LAN</strong> (Trưởng nhóm)</p>
-                <p>Số tài khoản / SĐT: <strong>0986728916</strong>, Ngân hàng Quân Đội (MBBank)</p>
+                <p>Số tài khoản / SĐT: <strong>0964135205</strong>, Ngân hàng Quân Đội (MBBank)</p>
                 <p className="text-forest-900 font-semibold">Nội dung chuyển khoản: {submittedOrderDetails.orderId}</p>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function CartPage({ cart, onUpdateQuantity, onRemoveItem, onClear
 
           <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href={`https://zalo.me/0986728916?text=${encodeURIComponent(`Chào bạn Mai Lan, mình vừa đặt đơn hàng ${submittedOrderDetails.orderId} trên web Biochar Bã Chè Đất Tổ (${submittedOrderDetails.finalTotal.toLocaleString()}đ). Nhờ nhóm xác nhận giúp mình nhé!`)}`}
+              href={`https://zalo.me/0964135205?text=${encodeURIComponent(`Chào bạn Mai Lan, mình vừa đặt đơn hàng ${submittedOrderDetails.orderId} trên web Biochar Bã Chè Đất Tổ (${submittedOrderDetails.finalTotal.toLocaleString()}đ). Nhờ nhóm xác nhận giúp mình nhé!`)}`}
               target="_blank"
               rel="noreferrer"
               className="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition btn-press"

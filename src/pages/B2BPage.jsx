@@ -185,7 +185,7 @@ export default function B2BPage() {
               </p>
               <div className="pt-2">
                 <a
-                  href={`https://zalo.me/0986728916?text=${encodeURIComponent(`Xin chào Mai Lan, tôi vừa gửi yêu cầu hợp tác B2B từ đơn vị: ${companyName}. Số điện thoại: ${phone}.`)}`}
+                  href={`https://zalo.me/0964135205?text=${encodeURIComponent(`Xin chào Mai Lan, tôi vừa gửi yêu cầu hợp tác B2B từ đơn vị: ${companyName}. Số điện thoại: ${phone}.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-xs shadow-md btn-press"
@@ -311,8 +311,8 @@ export default function B2BPage() {
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-forest-700" strokeWidth={1.75} />
               <span>Trao đổi trực tiếp với Trưởng nhóm:</span>
-              <a href="tel:0986728916" className="text-forest-950 font-bold hover:underline">
-                0986.728.916 (Nguyễn Ngọc Mai Lan)
+              <a href="tel:0964135205" className="text-forest-950 font-bold hover:underline">
+                0964.135.205 (Nguyễn Ngọc Mai Lan)
               </a>
             </div>
             <div className="flex items-center gap-2">

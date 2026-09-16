@@ -64,10 +64,10 @@ export default function BlogPage() {
             <p className="text-xs text-charcoal-500">Đội ngũ kỹ sư và giảng viên cố vấn hỗ trợ kiểm tra mẫu đất miễn phí.</p>
           </div>
           <a
-            href="tel:0986728916"
+            href="tel:0964135205"
             className="px-5 py-2.5 rounded-full bg-forest-950 text-white font-bold text-xs shrink-0 hover:bg-forest-900 transition btn-press"
           >
-            Hotline: 0986.728.916
+            Hotline: 0964.135.205
           </a>
         </div>
       </div>

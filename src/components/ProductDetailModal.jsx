@@ -175,7 +175,7 @@ export default function ProductDetailModal({ product, onClose, onAddToCart, onBu
                   <Truck className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> Giao hàng toàn quốc
                 </span>
                 <span className="flex items-center gap-1">
-                  <Phone className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> Tư vấn: 0986.728.916
+                  <Phone className="w-3.5 h-3.5 text-forest-700" strokeWidth={1.75} /> Tư vấn: 0964.135.205
                 </span>
               </div>
             </div>

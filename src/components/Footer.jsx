@@ -99,8 +99,8 @@ export default function Footer({ setActivePage }) {
 
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-forest-300 shrink-0" strokeWidth={1.75} />
-                <a href="tel:0986728916" className="text-forest-200 font-bold hover:underline">
-                  0986.728.916
+                <a href="tel:0964135205" className="text-forest-200 font-bold hover:underline">
+                  0964.135.205
                 </a>
               </div>
 

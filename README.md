@@ -16,7 +16,7 @@ Website thương mại điện tử & giới thiệu toàn diện cho dự án *
 6. **Đối Tác B2B & "Đổi Phế Phẩm Lấy Vật Tư"**: Dành cho 60 nhà máy chè thu gom 0đ, cung ứng sỉ cho HTX nông nghiệp, và than hoạt tính lọc nước thải cho 7 KCN Phú Thọ.
 7. **Tra Cứu Mã QR Nguồn Gốc (Traceability Prototype)**: Tra cứu minh bạch mã lô sản phẩm (VD: `BATCH-TS2026-01`), xuất xứ bã chè, nhiệt độ lò nung, kết quả lab và chứng nhận giảm phát thải carbon.
 8. **Cẩm Nang & Tin Tức Nông Nghiệp**: Hướng dẫn kỹ thuật bón biochar cho đất đồi dốc, xử lý nước giếng khoan và câu chuyện kinh tế tuần hoàn.
-9. **Liên Hệ Trực Tiếp**: Thông tin Trưởng nhóm Nguyễn Ngọc Mai Lan, hotline `0986.728.916`, nút Zalo chat nổi và form gửi tin nhắn.
+9. **Liên Hệ Trực Tiếp**: Thông tin Trưởng nhóm Nguyễn Ngọc Mai Lan, hotline `0964.135.205`, nút Zalo chat nổi và form gửi tin nhắn.
 
 ---
 
@@ -37,8 +37,8 @@ Thư mục `dist/` sẵn sàng triển khai miễn phí lên Vercel, Netlify ho�
 ---
 
 ## 👩‍💼 Thông tin Trưởng nhóm & Điều hành
-- **Trưởng nhóm**: Nguyễn Ngọc Mai Lan – Lớp K22 Kế Toán B, Trường Đại học Hùng Vương
-- **Hotline / Zalo**: 0986.728.916
+- **Trưởng nhóm**: Nguyễn Ngọc Mai Lan : Lớp K22 Kế Toán B, Trường Đại học Hùng Vương
+- **Hotline / Zalo**: 0964.135.205
 - **Email**: nguyenngocmailan.biochar@gmail.com
 - **Xưởng thực nghiệm**: Cụm Công nghiệp Giáp Lai, Huyện Thanh Sơn, Tỉnh Phú Thọ
 - **Văn phòng**: Trung tâm Khởi nghiệp & Đổi mới Sáng tạo, ĐH Hùng Vương, TP. Việt Trì, Phú Thọ
