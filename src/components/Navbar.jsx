@@ -23,25 +23,6 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
 
   return (
     <header className="sticky top-0 z-50 glass-panel border-b border-forest-950/10 transition-all">
-      {/* Micro announcement top bar */}
-      <div className="bg-forest-950 text-forest-200 text-[11px] py-1.5 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-white tracking-wide">Đội Hùng Vương Đất Tổ • Startup Idea 2026</span>
-            <span className="hidden md:inline text-forest-400">•</span>
-            <span className="hidden md:inline text-forest-300">Than Sinh Học Từ Bã Chè Phú Thọ</span>
-          </div>
-
-          <div className="flex items-center gap-4 font-semibold text-white">
-            <a href="tel:0365542212" className="hover:underline">
-              Hotline: 0365.542.212
-            </a>
-            <span className="text-forest-400 hidden sm:inline">•</span>
-            <span className="text-forest-300 hidden sm:inline">Trường ĐH Hùng Vương</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[72px]">
