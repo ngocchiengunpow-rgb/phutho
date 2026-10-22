@@ -106,6 +106,18 @@ export default function Footer({ setActivePage }) {
                 <span className="text-charcoal-400">Xưởng Pilot thực nghiệm: </span>
                 <p className="text-charcoal-300 text-[11px]">Huyện Thanh Sơn, Tỉnh Phú Thọ</p>
               </div>
+
+              <div className="pt-2 border-t border-forest-900/60 flex items-center gap-2.5">
+                <img 
+                  src="/images/qr_phutho_code.png" 
+                  alt="QR Web App" 
+                  className="w-12 h-12 rounded-lg bg-white p-1 object-contain shrink-0"
+                />
+                <div className="text-[10px] text-charcoal-300 leading-tight">
+                  <span className="font-bold text-white block">Quét truy cập Web App:</span>
+                  <a href="https://phutho-ten.vercel.app" target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline">phutho-ten.vercel.app</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

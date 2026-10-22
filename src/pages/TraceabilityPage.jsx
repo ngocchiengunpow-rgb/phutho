@@ -77,22 +77,32 @@ export default function TraceabilityPage() {
       {/* Batch Details Card */}
       {activeBatch && (
         <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-forest-950/5 space-y-8 animate-fadeIn">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-chalk-200 gap-3">
-            <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-2.5 py-1 rounded-full border border-forest-200">
-                CHỨNG THỰC LÔ HÀNG ĐẠT CHUẨN
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-forest-950 mt-2 tracking-tight">
-                MÃ LÔ: {activeBatch.code}
-              </h2>
-              <p className="text-xs sm:text-sm font-semibold text-charcoal-600 mt-0.5">
-                {activeBatch.product}
-              </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-chalk-200 gap-4">
+            <div className="flex items-start gap-4">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden bg-white border border-forest-200 shadow-sm shrink-0 p-1">
+                <img 
+                  src="/images/qr_tea_hills.jpg" 
+                  alt="Mã QR định danh bao bì" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-2.5 py-1 rounded-full border border-forest-200">
+                  CHỨNG THỰC LÔ HÀNG ĐẠT CHUẨN
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-forest-950 mt-1 tracking-tight">
+                  MÃ LÔ: {activeBatch.code}
+                </h2>
+                <p className="text-xs sm:text-sm font-semibold text-charcoal-600 mt-0.5">
+                  {activeBatch.product}
+                </p>
+              </div>
             </div>
 
             <div className="text-left sm:text-right">
               <span className="text-xs text-charcoal-400 block">Ngày xuất xưởng:</span>
               <span className="font-bold text-forest-950 text-sm sm:text-base">{activeBatch.productionDate}</span>
+              <span className="text-[11px] text-emerald-700 font-semibold block mt-0.5">Mã QR hợp lệ 100%</span>
             </div>
           </div>
 

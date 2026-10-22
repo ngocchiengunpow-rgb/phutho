@@ -228,21 +228,32 @@ export default function AboutPage({ setActivePage }) {
 
           {/* Advisor Feature Card */}
           {advisors.length > 0 && (
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-forest-950/5 shadow-md flex flex-col md:flex-row items-center gap-6">
-              <img
-                src={advisors[0].avatar}
-                alt={advisors[0].name}
-                className="w-20 h-20 rounded-full object-cover border-2 border-forest-700 shadow-md shrink-0"
-              />
-              <div className="space-y-1.5 text-center md:text-left">
-                <span className="text-xs font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-3 py-1 rounded-full border border-forest-200">
-                  {advisors[0].role}
-                </span>
-                <h3 className="text-lg font-bold text-forest-950">{advisors[0].name}</h3>
-                <p className="text-xs font-semibold text-charcoal-500">{advisors[0].organization}</p>
-                <p className="text-xs text-charcoal-600 leading-relaxed pt-1">
-                  {advisors[0].bio}
-                </p>
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-forest-950/5 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <img
+                  src={advisors[0].avatar}
+                  alt={advisors[0].name}
+                  className="w-20 h-20 rounded-full object-cover border-2 border-forest-700 shadow-md shrink-0"
+                />
+                <div className="space-y-1.5 text-center sm:text-left">
+                  <span className="text-xs font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-3 py-1 rounded-full border border-forest-200">
+                    {advisors[0].role}
+                  </span>
+                  <h3 className="text-lg font-bold text-forest-950">{advisors[0].name}</h3>
+                  <p className="text-xs font-semibold text-charcoal-500">{advisors[0].organization}</p>
+                  <p className="text-xs text-charcoal-600 leading-relaxed pt-1 max-w-xl">
+                    {advisors[0].bio}
+                  </p>
+                </div>
+              </div>
+
+              <div className="shrink-0 flex flex-col items-center p-3.5 bg-[#faf8f5] rounded-2xl border border-chalk-200 text-center">
+                <img 
+                  src="/images/logo_hung_vuong.png" 
+                  alt="Trường ĐH Hùng Vương" 
+                  className="w-16 h-16 object-contain"
+                />
+                <span className="text-[10px] font-bold text-forest-950 mt-1 uppercase tracking-tight">ĐH Hùng Vương</span>
               </div>
             </div>
           )}
@@ -300,6 +311,29 @@ export default function AboutPage({ setActivePage }) {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Sơ đồ danh mục và quản trị rủi ro */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-forest-950/5 shadow-md space-y-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-3 py-1 rounded-full border border-forest-200">
+                QUẢN TRỊ RỦI RO THỰC TẾ
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-forest-950 mt-2">
+                Sơ Đồ Danh Mục Và Quản Trị Rủi Ro Dự Án
+              </h3>
+              <p className="text-xs text-charcoal-500 mt-1">
+                Kế hoạch phòng ngừa và ứng phó với 3 nhóm rủi ro: Nguyên liệu ẩm, Lò nhiệt phân yếm khí, và Tâm lý thị trường.
+              </p>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden border border-chalk-200 bg-[#faf8f5] p-2">
+              <img
+                src="/images/diagram_risk_management.jpg"
+                alt="Sơ đồ danh mục và quản trị rủi ro"
+                className="w-full rounded-xl object-contain max-h-[580px] mx-auto"
+              />
             </div>
           </div>
         </div>
@@ -684,6 +718,29 @@ export default function AboutPage({ setActivePage }) {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Sơ đồ danh mục và quản trị rủi ro */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-forest-950/5 shadow-md space-y-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-3 py-1 rounded-full border border-forest-200">
+                QUẢN TRỊ RỦI RO THỰC TẾ
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-forest-950 mt-2">
+                Sơ Đồ Danh Mục Và Quản Trị Rủi Ro Dự Án
+              </h3>
+              <p className="text-xs text-charcoal-500 mt-1">
+                Kế hoạch phòng ngừa và ứng phó với 3 nhóm rủi ro: Nguyên liệu ẩm, Lò nhiệt phân yếm khí, và Tâm lý thị trường.
+              </p>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden border border-chalk-200 bg-[#faf8f5] p-2">
+              <img
+                src="/images/diagram_risk_management.jpg"
+                alt="Sơ đồ danh mục và quản trị rủi ro"
+                className="w-full rounded-xl object-contain max-h-[580px] mx-auto"
+              />
             </div>
           </div>
         </div>

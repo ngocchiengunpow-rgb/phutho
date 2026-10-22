@@ -122,7 +122,30 @@ export default function CircularTechPage({ setActivePage }) {
         </div>
       </section>
 
-      {/* 3. TUYÊN BỐ GIÁ TRỊ CỐT LÕI */}
+      {/* 3. SƠ ĐỒ DANH MỤC VÀ QUẢN TRỊ RỦI RO */}
+      <section className="space-y-6">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="text-xs font-bold uppercase tracking-wider text-forest-800 bg-forest-50 px-3 py-1 rounded-full border border-forest-200">
+            HỒ SƠ AN TOÀN VẬN HÀNH
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight mt-2">
+            Sơ Đồ Danh Mục & Quản Trị Rủi Ro Dự Án
+          </h2>
+          <p className="text-charcoal-500 text-xs sm:text-sm mt-1">
+            Đánh giá xác suất và giải pháp kiểm soát 3 nhóm rủi ro: Nguyên liệu thô, Kỹ thuật công nghệ, và Thị trường.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-forest-950/5">
+          <img
+            src="/images/diagram_risk_management.jpg"
+            alt="Sơ đồ danh mục và quản trị rủi ro dự án"
+            className="w-full rounded-2xl max-h-[580px] object-contain mx-auto"
+          />
+        </div>
+      </section>
+
+      {/* 4. TUYÊN BỐ GIÁ TRỊ CỐT LÕI */}
       <section className="space-y-8">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight">
