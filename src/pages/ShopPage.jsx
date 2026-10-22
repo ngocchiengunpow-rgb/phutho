@@ -7,11 +7,8 @@ export default function ShopPage({ onSelectProduct, onAddToCart }) {
 
   const categories = [
     { id: 'all', label: 'Tất Cả Sản Phẩm' },
-    { id: 'soil', label: 'Biochar Cải Tạo Đất' },
-    { id: 'microbe', label: 'Phân Vi Sinh Biochar' },
-    { id: 'carbon', label: 'Than Hoạt Tính Lọc Nước' },
-    { id: 'byproduct', label: 'Dấm Gỗ Sinh Học' },
-    { id: 'combo', label: 'Combo Ưu Đãi' },
+    { id: 'soil', label: 'Than Sinh Học Cải Tạo Đất' },
+    { id: 'carbon', label: 'Than Hoạt Tính Kỹ Thuật' },
   ];
 
   let filtered = selectedCategory === 'all'

@@ -65,22 +65,16 @@ export default function Footer({ setActivePage }) {
 
           {/* Col 3: Core Products */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold text-xs uppercase tracking-wider">Dòng Sản Phẩm</h4>
+            <h4 className="text-white font-bold text-xs uppercase tracking-wider">Dòng Sản Phẩm Cốt Lõi</h4>
             <ul className="space-y-2 text-xs text-charcoal-300">
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Biochar Cải Tạo Đất Đất Tổ (15tr/tấn)
+                🌱 Than Sinh Học Biochar Đất Tổ (75.000 đ/5kg)
               </li>
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Biochar-Microbe Bọc Vi Sinh Trichoderma
+                💧 Than Hoạt Tính Kỹ Thuật Lọc Nước (20.000 đ/kg)
               </li>
-              <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Than Hoạt Tính Kỹ Thuật Lọc Nước (20tr/tấn)
-              </li>
-              <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Viên Nén Mini Cho Sen Đá & Cây Cảnh
-              </li>
-              <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Combo Sống Xanh Đất Tổ Đô Thị
+              <li className="hover:text-white cursor-pointer pt-2 text-[11px] text-emerald-400 font-medium" onClick={() => handleNav('shop')}>
+                → Xem chi tiết quy cách đóng gói & đặt mua
               </li>
             </ul>
           </div>

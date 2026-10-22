@@ -5,8 +5,7 @@ import BiocharCalculator from '../components/BiocharCalculator';
 import SoilComparisonShowcase from '../components/SoilComparisonShowcase';
 
 export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }) {
-  const featuredProduct = products[0]; // Than sinh học cải tạo đất
-  const companionProducts = products.slice(1, 4);
+  const featuredProducts = products.slice(0, 2);
 
   return (
     <div className="space-y-24 pb-24">
@@ -332,107 +331,103 @@ export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }
           </button>
         </div>
 
-        {/* Bento Grid: 1 Large Hero Card + 3 Companion Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Hero Card (Biochar) */}
-          <div className="lg:col-span-6 bg-white rounded-3xl overflow-hidden border border-forest-950/5 shadow-xl flex flex-col justify-between group">
+        {/* 2 Flagship Product Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {featuredProducts.map((product, idx) => (
             <div 
-              className="relative aspect-16/10 overflow-hidden bg-chalk-100 cursor-pointer"
-              onClick={() => onSelectProduct(featuredProduct)}
+              key={product.id}
+              className="bg-white rounded-3xl overflow-hidden border border-forest-950/10 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
-              <img
-                src={featuredProduct.image}
-                alt={featuredProduct.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <span className="absolute top-4 left-4 bg-forest-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Sản phẩm chủ lực
-              </span>
-            </div>
-
-            <div className="p-6 space-y-4">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800">
-                  {featuredProduct.categoryName}
-                </span>
-                <h3 
-                  onClick={() => onSelectProduct(featuredProduct)}
-                  className="text-xl font-bold text-forest-950 hover:text-forest-800 cursor-pointer mt-1"
+                <div 
+                  className="relative aspect-16/10 overflow-hidden bg-chalk-100 cursor-pointer"
+                  onClick={() => onSelectProduct(product)}
                 >
-                  {featuredProduct.name}
-                </h3>
-                <p className="text-xs text-charcoal-600 mt-1 leading-relaxed">
-                  {featuredProduct.description}
-                </p>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span className="bg-forest-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                      {idx === 0 ? 'Sản phẩm chủ lực (80% sản lượng)' : 'Kỹ thuật lọc nước (20% sản lượng)'}
+                    </span>
+                    <span className="bg-emerald-700 text-white text-xs font-medium px-2.5 py-1 rounded-full shadow-sm">
+                      {product.specs?.ecoCert || 'OCOP Dự Kiến'}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-7 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-forest-800">
+                      {product.categoryName}
+                    </span>
+                    <span className="text-xs text-amber-600 font-semibold flex items-center gap-1">
+                      ★ {product.rating} <span className="text-charcoal-400 font-normal">({product.reviewsCount} đánh giá)</span>
+                    </span>
+                  </div>
+
+                  <h3 
+                    onClick={() => onSelectProduct(product)}
+                    className="text-xl font-bold text-forest-950 hover:text-forest-800 cursor-pointer transition leading-snug"
+                  >
+                    {product.name}
+                  </h3>
+
+                  <p className="text-xs text-charcoal-600 leading-relaxed line-clamp-2">
+                    {product.description}
+                  </p>
+
+                  <div className="pt-2 flex flex-wrap gap-2">
+                    {product.highlights?.slice(0, 2).map((hl, i) => (
+                      <span key={i} className="text-[11px] bg-chalk-100 text-charcoal-700 px-2.5 py-1 rounded-lg border border-chalk-200">
+                        ✓ {hl}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              <div className="pt-4 border-t border-chalk-200 flex items-center justify-between">
+              <div className="p-6 sm:p-7 pt-4 border-t border-chalk-200 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-charcoal-400 block">Đơn giá ({featuredProduct.priceUnit})</span>
-                  <span className="text-2xl font-bold text-forest-950 tabular-nums">
-                    {featuredProduct.basePrice.toLocaleString()} đ
-                  </span>
+                  <span className="text-[10px] text-charcoal-400 block">Đơn giá ({product.priceUnit})</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl font-bold text-forest-950 tabular-nums">
+                      {product.basePrice.toLocaleString()} đ
+                    </span>
+                    <span className="text-xs text-charcoal-500">/ {product.priceUnit}</span>
+                  </div>
                 </div>
 
                 <div className="flex gap-2">
                   <button
-                    onClick={() => onSelectProduct(featuredProduct)}
-                    className="px-4 py-2 rounded-full border border-chalk-300 text-charcoal-800 hover:bg-chalk-50 text-xs font-semibold transition btn-press"
+                    onClick={() => onSelectProduct(product)}
+                    className="px-4 py-2.5 rounded-full border border-chalk-300 text-charcoal-800 hover:bg-chalk-50 text-xs font-semibold transition btn-press"
                   >
                     Xem Chi Tiết
                   </button>
                   <button
                     onClick={() => onAddToCart({
-                      id: featuredProduct.id,
-                      name: featuredProduct.name,
-                      variantId: featuredProduct.variants[0].id,
-                      variantLabel: featuredProduct.variants[0].label,
-                      price: featuredProduct.variants[0].price,
+                      id: product.id,
+                      name: product.name,
+                      variantId: product.variants[0].id,
+                      variantLabel: product.variants[0].label,
+                      price: product.variants[0].price,
                       quantity: 1,
-                      image: featuredProduct.image
+                      image: product.image
                     })}
-                    className="px-4 py-2 rounded-full bg-forest-950 hover:bg-forest-900 text-white text-xs font-semibold shadow-md transition btn-press"
+                    className="px-4 py-2.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white text-xs font-semibold shadow-md transition btn-press flex items-center gap-1.5"
                   >
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
                     Thêm Nhanh
                   </button>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* 3 Companion Cards */}
-          <div className="lg:col-span-6 grid grid-cols-1 gap-4">
-            {companionProducts.map((p) => (
-              <div
-                key={p.id}
-                className="bg-white rounded-3xl p-4 sm:p-5 border border-forest-950/5 shadow-md flex gap-4 items-center group cursor-pointer hover:shadow-lg transition-all"
-                onClick={() => onSelectProduct(p)}
-              >
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-chalk-100 shrink-0 border border-forest-950/5">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-forest-800">
-                    {p.categoryName}
-                  </span>
-                  <h4 className="font-bold text-forest-950 text-sm sm:text-base truncate group-hover:text-forest-700 transition">
-                    {p.name}
-                  </h4>
-                  <p className="text-xs text-charcoal-500 line-clamp-1 mt-0.5">
-                    {p.subTitle}
-                  </p>
-                  <div className="mt-2 text-sm font-bold text-forest-950 tabular-nums">
-                    {p.basePrice.toLocaleString()} đ <span className="text-[10px] font-normal text-charcoal-400">/ {p.priceUnit}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </section>
 
