@@ -237,3 +237,55 @@ export default function App() {
     </div>
   );
 }
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("ErrorBoundary caught an error:", error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-[#faf8f5] p-6 text-center">
+          <div className="max-w-md bg-white p-8 rounded-3xl shadow-xl border border-forest-950/10 space-y-4">
+            <div className="w-12 h-12 mx-auto rounded-full bg-forest-50 text-forest-800 flex items-center justify-center text-xl font-bold">
+              🌿
+            </div>
+            <h2 className="text-xl font-bold text-forest-950">Đang tải lại giao diện...</h2>
+            <p className="text-xs text-charcoal-600">
+              Hệ thống đã phát hiện thay đổi dữ liệu sản phẩm. Vui lòng bấm làm mới để đồng bộ phiên bản mới nhất.
+            </p>
+            <button
+              onClick={() => {
+                try {
+                  localStorage.removeItem('biochar_cart');
+                } catch {
+                  // ignore
+                }
+                window.location.reload();
+              }}
+              className="px-6 py-2.5 bg-forest-950 text-white rounded-full text-xs font-semibold hover:bg-forest-900 transition shadow-md"
+            >
+              Làm Mới Trang Ngay
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+export function AppWithBoundary() {
+  return (
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  );
+}

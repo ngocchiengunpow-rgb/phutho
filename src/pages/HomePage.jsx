@@ -5,6 +5,7 @@ import BiocharCalculator from '../components/BiocharCalculator';
 import SoilComparisonShowcase from '../components/SoilComparisonShowcase';
 
 export default function HomePage({ setActivePage, onSelectProduct, onAddToCart }) {
+  const featuredProduct = products[0] || {};
   const featuredProducts = products.slice(0, 2);
 
   return (
