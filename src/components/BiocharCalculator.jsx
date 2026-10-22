@@ -11,14 +11,14 @@ export default function BiocharCalculator({ onAddToCart }) {
       name: 'Đồi Chè Phú Thọ (Thanh Sơn, Tân Sơn, Yên Lập)',
       ratePerHaKg: 1200,
       npkSavingPercent: 30,
-      soilBenefit: 'Tăng 0.8 đến 1.2 độ pH, giữ ẩm mùa khô, tannin tự nhiên ngăn nấm rễ.',
+      soilBenefit: 'Hạ chua đất từ <4.0 lên dải tối ưu 4.8 - 5.5, ngậm nước mùa khô, bọc vi sinh Trichoderma ngăn nấm rễ.',
     },
     grapefruit: {
       name: 'Bưởi Đoan Hùng & Cây Ăn Quả (Cam, Ổi, Xoài)',
       ratePerHaKg: 1000,
       ratePerTreeKg: 3.5,
       npkSavingPercent: 25,
-      soilBenefit: 'Bung rễ tơ trắng, chống nghẹt rễ đất chua, ngọt quả đậm vị.',
+      soilBenefit: 'Bung rễ tơ trắng, hạ chua đất đồi Đoan Hùng, tăng độ ngọt mọng quả.',
     },
     vegetables: {
       name: 'Rau Màu & Dược Liệu VietGAP',
@@ -59,7 +59,7 @@ export default function BiocharCalculator({ onAddToCart }) {
 
   const totalNpkCost = haEquivalent * 18000000;
   const estimatedSavingVnd = Math.round(totalNpkCost * (currentCrop.npkSavingPercent / 100));
-  const carbonOffsetKg = Math.round(requiredBiocharKg * 2.1);
+  const carbonOffsetKg = Math.round(requiredBiocharKg * 2.75); // 2,5 - 3 tấn CO2e / tấn biochar
   const bags25kg = Math.ceil(requiredBiocharKg / 25);
 
   return (
@@ -188,10 +188,10 @@ export default function BiocharCalculator({ onAddToCart }) {
                 if (onAddToCart) {
                   onAddToCart({
                     id: 'biochar-cai-tao-dat',
-                    name: 'Biochar Bã Chè Cải Tạo Đất',
+                    name: 'Than Sinh Học Cải Tạo Đất Biochar Đất Tổ',
                     variantId: '25kg',
                     variantLabel: `Bao 25kg (Định lượng máy tính: ${bags25kg} bao)`,
-                    price: 320000,
+                    price: 350000,
                     quantity: Math.max(1, bags25kg),
                     image: '/images/product_biochar.jpg'
                   });

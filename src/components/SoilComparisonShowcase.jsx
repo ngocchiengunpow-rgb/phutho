@@ -6,43 +6,43 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
   const soilMetrics = [
     {
       label: 'Độ chua thổ nhưỡng (pH)',
-      beforeVal: 'pH 4.0 - 4.3',
-      afterVal: 'pH 6.2 - 6.5',
-      beforeNote: 'Chua nặng, rễ chè bị nghẹt và ngộ độc sắt/nhôm',
-      afterNote: 'Trung tính lý tưởng, bộ rễ hấp thu trọn vẹn khoáng chất',
-      diffText: '+2.2 pH (Đạt chuẩn canh tác chè đặc sản)',
-      beforePercent: 35,
-      afterPercent: 85,
-    },
-    {
-      label: 'Độ tơi xốp & Khả năng giữ ẩm',
-      beforeVal: 'Thất thoát 75% nước',
-      afterVal: 'Giữ ẩm kéo dài 14 - 21 ngày',
-      beforeNote: 'Đất chai cứng, mùa mưa rửa trôi, mùa khô nứt nẻ',
-      afterNote: 'Cấu trúc xốp vi mô giữ nước như miếng bọt biển sinh học',
-      diffText: 'Giảm 40% công tưới trong mùa khô hạn',
+      beforeVal: 'pH < 4.0 (Chua hóa nghiêm trọng)',
+      afterVal: 'pH 4.8 - 5.5 (Dải tối ưu cho chè)',
+      beforeNote: 'Tập quán thâm canh phân vô cơ làm pH tụt dưới 4.0, nghẹt rễ và chai hóa',
+      afterNote: 'Biochar kiềm tự nhiên (pH 8.5 - 9.5) hạ chua an toàn, rễ bung tơ mạnh mẽ',
+      diffText: 'Hạ chua êm dịu, đạt dải pH tối ưu 4.5 - 5.5 theo Viện Nghiên cứu Chè',
       beforePercent: 25,
       afterPercent: 88,
     },
     {
-      label: 'Mật độ vi sinh vật đối kháng (Bacillus & Trichoderma)',
+      label: 'Độ tơi xốp & Khả năng ngậm nước',
+      beforeVal: 'Thất thoát 75% nước tưới',
+      afterVal: 'Giữ ẩm kéo dài 14 - 21 ngày',
+      beforeNote: 'Đất chai cứng, nghèo chất hữu cơ, mất khả năng giữ nước tự nhiên',
+      afterNote: 'Khung Lignin mô sợi bã chè xốp vi mô (BET > 400 m²/g) giữ ẩm vượt trội',
+      diffText: 'Tiết kiệm 40% công và nước tưới trong mùa khô trung du',
+      beforePercent: 25,
+      afterPercent: 90,
+    },
+    {
+      label: 'Mật độ vi sinh vật đối kháng (Trichoderma bản địa)',
       beforeVal: 'Cạn kiệt (< 10³ CFU/g)',
-      afterVal: 'Bùng nổ (> 10⁷ CFU/g)',
-      beforeNote: 'Nấm bệnh rễ lây lan, cây chè vàng lá cằn cỗi',
-      afterNote: 'Than làm "ngôi nhà vi sinh", tiêu diệt mầm nấm hại',
-      diffText: 'Kháng nấm rễ tự nhiên, không cần thuốc BVTV',
+      afterVal: 'Bùng nổ (≥ 10⁸ CFU/g)',
+      beforeNote: 'Nấm Phytophthora gây thối rễ, búp chè xơ cằn và vàng lá',
+      afterNote: 'Lõi than bọc chủng Trichoderma bản địa bảo vệ bộ rễ, kích đẻ nhánh',
+      diffText: 'Kháng nấm rễ tự nhiên, giảm phụ thuộc thuốc trừ sâu hóa học',
       beforePercent: 15,
-      afterPercent: 92,
+      afterPercent: 95,
     },
     {
       label: 'Chi phí phân bón vô cơ (NPK)',
-      beforeVal: 'Tốn 100% chi phí bón',
-      afterVal: 'Cắt giảm 25% - 30%',
-      beforeNote: 'Phân bị rửa trôi hơn 60% sau các trận mưa rào',
-      afterNote: 'Biochar hấp phụ và giải phóng dinh dưỡng chậm rãi',
-      diffText: 'Tiết kiệm 8 - 12 triệu VNĐ / hecta chè mỗi năm',
+      beforeVal: 'Tốn 100% chi phí phân vô cơ',
+      afterVal: 'Cắt giảm 20% - 30% chi phí',
+      beforeNote: 'Phân bón vô cơ gốc axit bị rửa trôi hơn 60% khi mưa to',
+      afterNote: 'Than ngậm và giải phóng dinh dưỡng chậm rãi theo nhu cầu của cây',
+      diffText: 'Tiết kiệm 8 - 12 triệu VNĐ / ha chè mỗi năm',
       beforePercent: 95,
-      afterPercent: 35,
+      afterPercent: 30,
     }
   ];
 
@@ -52,13 +52,13 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
           <span className="text-xs font-bold uppercase tracking-wider text-forest-800 bg-forest-100/90 px-3.5 py-1 rounded-full border border-forest-200">
-            KẾT QUẢ KHẢO SÁT THỰC ĐỊA
+            KẾT QUẢ KHẢO SÁT THỰC ĐỊA & DEMO PLOT
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-forest-950 tracking-tight text-balance">
-            Thực Nghiệm Đất: Trước & Sau Khi Cải Tạo Bằng Biochar
+            Thực Nghiệm Đất: Trước & Sau Khi Cải Tạo Bằng Than Sinh Học Bã Chè
           </h2>
           <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed text-pretty">
-            Kết quả quan trắc thổ nhưỡng thực tế tại các đồi chè thoái hóa thuộc huyện Thanh Sơn và Tân Sơn (Phú Thọ) sau chu kỳ 60 ngày thử nghiệm.
+            Khảo sát thực tế tại các vùng chè và vườn bưởi Đoan Hùng (Phú Thọ) theo báo cáo khoa học Viện Nghiên Cứu Chè và Đại học Hùng Vương sau chu kỳ thử nghiệm.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                   Tình trạng ban đầu (Chưa bón)
                 </span>
-                <span className="text-xs font-semibold text-charcoal-400">Đất đồi dốc chua hóa</span>
+                <span className="text-xs font-semibold text-charcoal-400">Đất đồi dốc chua hóa &lt; 4.0</span>
               </div>
 
               <div className="aspect-16/9 rounded-2xl overflow-hidden bg-amber-100/40 relative border border-amber-200/60">
@@ -121,33 +121,33 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-950/70 via-transparent to-transparent flex items-end p-4">
                   <div className="text-white text-xs space-y-0.5">
-                    <p className="font-bold text-amber-200">Đất chai cứng, nứt nẻ, bạc màu</p>
-                    <p className="text-white/80 text-[11px]">pH &lt; 4.3 • Thiếu hụt mùn vi sinh • Rễ chè còi cọc</p>
+                    <p className="font-bold text-amber-200">Đất chai cứng, nghẹt rễ, nghèo vi sinh</p>
+                    <p className="text-white/80 text-[11px]">pH tụt dưới 4.0 • Mất khả năng giữ nước • Cây chè còi cọc</p>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-3 pt-2">
-                <h4 className="font-bold text-charcoal-900 text-sm">Hệ quả canh tác truyền thống:</h4>
+                <h4 className="font-bold text-charcoal-900 text-sm">Hệ quả từ lạm dụng phân bón vô cơ gốc axit:</h4>
                 <ul className="space-y-2 text-xs text-charcoal-600">
                   <li className="flex items-start gap-2">
                     <span className="text-red-600 font-bold shrink-0">•</span>
-                    <span>Bón nhiều NPK làm đất ngày càng chua và nén chặt, dinh dưỡng bị kết tủa rễ không hút được.</span>
+                    <span>Cây chè ưa chua nhẹ (pH 4.5 - 5.5), nhưng đất bị chua nặng (&lt; 4.0) làm nghẹt rễ và ngộ độc nhôm sắt.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-600 font-bold shrink-0">•</span>
-                    <span>Mùa khô đất mất ẩm nhanh chóng, cây héo lá, năng suất búp loại 1 giảm sút 25%.</span>
+                    <span>Mùa khô đất mất ẩm nhanh, mùa mưa rửa trôi mùn màu, búp chè xơ cứng giảm giá trị thương phẩm.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-600 font-bold shrink-0">•</span>
-                    <span>Nấm bệnh tuyến trùng hoành hành gây chết cây con và làm thoái hóa cả vùng đồi chè.</span>
+                    <span>Chi phí mua phân hóa học tăng cao nhưng cây không hấp thụ được do đất bị chai cứng.</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 font-medium">
-              Khuyến cáo: Cần bón lót từ 1.5 đến 2 tấn Biochar/ha để giải độc nhôm và phục hồi đệm sinh học.
+              Khuyến cáo: Cần bón lót từ 1.0 đến 1.2 tấn Biochar/ha kết hợp vi sinh Trichoderma để giải độc đất và giữ nước.
             </div>
           </div>
         )}
@@ -158,9 +158,9 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
             <div className="space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-chalk-200">
                 <span className="text-xs font-bold uppercase tracking-wider text-forest-900 bg-forest-100 px-3 py-1 rounded-full border border-forest-200">
-                  Sau 60 ngày ứng dụng Biochar
+                  Sau khi ứng dụng Biochar bã chè
                 </span>
-                <span className="text-xs font-bold text-forest-700">Đã kiểm nghiệm thổ nhưỡng</span>
+                <span className="text-xs font-bold text-forest-700">Đã kiểm nghiệm thực địa</span>
               </div>
 
               <div className="aspect-16/9 rounded-2xl overflow-hidden bg-forest-100/40 relative border border-forest-200">
@@ -171,8 +171,8 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-transparent flex items-end p-4">
                   <div className="text-white text-xs space-y-0.5">
-                    <p className="font-bold text-forest-200">Đất đen tơi xốp, giữ ẩm và rễ khỏe</p>
-                    <p className="text-white/90 text-[11px]">pH ổn định 6.2 - 6.5 • Búp chè mập dày • Đạt chuẩn OCOP</p>
+                    <p className="font-bold text-forest-200">Đất đen tơi xốp, giữ ẩm và rễ bung khỏe</p>
+                    <p className="text-white/90 text-[11px]">pH ổn định 4.8 - 5.5 • Búp chè non mập mạp • Chuẩn VietGAP</p>
                   </div>
                 </div>
               </div>
@@ -182,22 +182,22 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
                 <ul className="space-y-2 text-xs text-charcoal-700">
                   <li className="flex items-start gap-2">
                     <span className="text-forest-700 font-bold shrink-0">✓</span>
-                    <span><strong>Nâng pH tự nhiên:</strong> Than bã chè giàu khoáng kiềm nhẹ nâng pH từ 4.2 lên 6.5 mà không gây sốc đất như bón vôi sống.</span>
+                    <span><strong>Hạ chua tự nhiên:</strong> Than bã chè kiềm tự nhiên (pH 8.5 - 9.5) trung hòa êm dịu, đưa đất về dải pH lý tưởng 4.8 - 5.5.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-forest-700 font-bold shrink-0">✓</span>
-                    <span><strong>Giữ ẩm bền bỉ:</strong> Cấu trúc mao quản vi xốp 420 m²/g giữ nước và dưỡng chất, giúp đồi chè xanh mướt qua mùa khô hạn.</span>
+                    <span><strong>Lõi vi sinh Trichoderma:</strong> Tiêu diệt nấm thối rễ, kích rễ tơ trắng bung mạnh, hấp thu phân bón tối đa.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-forest-700 font-bold shrink-0">✓</span>
-                    <span><strong>Tăng năng suất:</strong> Búp chè dày hơn, tăng 18 - 22% sản lượng chè búp tươi, tiết kiệm 30% tiền mua phân NPK.</span>
+                    <span><strong>Cắt giảm 20% - 30% phân NPK:</strong> Diện tích bề mặt &gt; 400 m²/g lưu giữ phân bón không bị rửa trôi khi mưa rào.</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-forest-50 border border-forest-200 text-xs text-forest-950 font-medium flex items-center justify-between">
-              <span>Độ bền cải tạo: Duy trì hiệu lực dưỡng đất từ 3 đến 5 năm chỉ sau một lần bón.</span>
+              <span>Độ bền cải tạo: Than sinh học cô lập carbon hàng trăm năm, giữ đệm đất bền bỉ nhiều vụ mùa.</span>
             </div>
           </div>
         )}
@@ -236,7 +236,7 @@ export default function SoilComparisonShowcase({ onCalculateClick }) {
                 {/* After bar */}
                 <div className="space-y-1">
                   <div className="flex justify-between text-[11px] text-forest-900">
-                    <span>Sau 60 ngày: <strong className="text-forest-900 font-bold">{m.afterVal}</strong></span>
+                    <span>Sau ứng dụng: <strong className="text-forest-900 font-bold">{m.afterVal}</strong></span>
                   </div>
                   <div className="w-full h-2 rounded-full bg-chalk-200 overflow-hidden">
                     <div

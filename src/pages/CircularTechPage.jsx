@@ -13,7 +13,7 @@ export default function CircularTechPage({ setActivePage }) {
             Mô Hình: Từ Đất Tổ, Trả Lại Đất Tổ
           </h1>
           <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
-            Dự án ứng dụng công nghệ nhiệt phân chậm (Slow Pyrolysis) ở dải nhiệt 350°C đến 450°C trong điều kiện yếm khí khép kín, biến bã chè phế thải thành vật tư giá trị gia tăng cao và cô lập carbon hàng trăm năm trong lòng đất.
+            Dự án ứng dụng công nghệ nhiệt phân chậm (Slow Pyrolysis) ở dải nhiệt 350°C đến 450°C trong môi trường yếm khí khép kín, biến bã chè phế phẩm thành Than sinh học cải tạo đất Biochar-Microbe và Than hoạt tính lọc nước, cô lập bền vững 2,5 – 3 tấn CO₂e cho mỗi tấn thành phẩm.
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@ export default function CircularTechPage({ setActivePage }) {
             Chu Trình Tuần Hoàn Sinh Khối Chè Phú Thọ
           </h2>
           <p className="text-charcoal-500 text-xs sm:text-sm mt-1">
-            Khép kín 100% dòng vật chất và dòng năng lượng tại chỗ, không phát thải thứ cấp ra môi trường.
+            Khép kín 100% dòng vật chất và năng lượng tại chỗ: không phát sinh chất thải thứ cấp ra môi trường.
           </p>
         </div>
 
@@ -38,34 +38,40 @@ export default function CircularTechPage({ setActivePage }) {
         </div>
       </section>
 
-      {/* 2. CÔNG NGHỆ LÒ NHIỆT PHÂN NỘI ĐỊA CẢI TIẾN */}
+      {/* 2. CÔNG NGHỆ LÒ NHIỆT PHÂN CẢI TIẾN & KHÍ SYNGAS */}
       <section className="bg-forest-950 text-white rounded-3xl p-8 sm:p-12 border border-forest-900 space-y-8 shadow-xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-forest-300">
-              ĐỘT PHÁ CÔNG NGHỆ NỘI ĐỊA
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+              ĐỘT PHÁ CÔNG NGHỆ NỘI ĐỊA CẢI TIẾN
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-              Lò Nhiệt Phân Liên Tục Tự Cấp Nhiệt Khí Syngas
+              Cụm Lò Nhiệt Phân Yếm Khí Tuần Hoàn Khí Syngas Tự Nuôi Lò
             </h2>
             <p className="text-forest-200 text-xs sm:text-sm leading-relaxed">
-              Thay vì chọn lò nhập khẩu đắt đỏ (350 đến 500 triệu VNĐ) khó căn chỉnh với bã chè hạt mịn, nhóm sáng lập lựa chọn thiết kế <strong>Lò cải tiến nội địa (126 triệu VNĐ)</strong> với trục vít nạp liệu chuyên dụng và ống dẫn tuần hoàn khí Syngas.
+              Dự án đầu tư hệ thống lò nhiệt phân nội địa cơ bản có buồng sấy, sau đó bổ sung 2 module cải tiến then chốt dưới sự hướng dẫn của Viện Nghiên Cứu Chè và các kỹ sư: (1) Hệ thống ống dẫn thu hồi khí gas sinh học (Syngas) tự đốt nuôi lò; và (2) Hệ thống phun trộn chủng vi sinh vật đối kháng Trichoderma ngay ở chặng làm nguội đầu ra.
             </p>
 
             <div className="space-y-3 pt-2">
               <div className="p-4 rounded-2xl bg-forest-900/60 border border-forest-800 text-xs">
-                <span className="font-bold text-white block mb-0.5">Tự tuần hoàn năng lượng (Syngas loop):</span>
-                <p className="text-forest-200/80 leading-relaxed">Khí sinh khối thoát ra trong buồng kín được dẫn ngược lại buồng đốt để sấy sơ bộ bã chè và duy trì nhiệt độ lò, giúp tiết kiệm 80% chất đốt.</p>
+                <span className="font-bold text-white block mb-0.5">Tiết kiệm 80% chi phí chất đốt (Vòng lặp Syngas):</span>
+                <p className="text-forest-200/80 leading-relaxed">
+                  Thu hồi toàn bộ dòng khí gas sinh học (Syngas) sinh ra từ quá trình nhiệt phân yếm khí, quay vòng đốt ngược lại để tự nuôi lò và dẫn nhiệt dư sấy gối đầu bã chè ẩm, giúp kéo giảm tổng chi phí vận hành xuống 40% so với đối thủ.
+                </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-forest-900/60 border border-forest-800 text-xs">
-                <span className="font-bold text-white block mb-0.5">Kiểm soát nhiệt độ yếm khí 350°C đến 450°C:</span>
-                <p className="text-forest-200/80 leading-relaxed">Dải nhiệt độ vàng giúp bảo toàn khoáng chất vi lượng (N, P, K tự nhiên của chè) và tối đa hóa cấu trúc xốp vi mô (BET trên 400 m2/g).</p>
+                <span className="font-bold text-white block mb-0.5">Dải nhiệt độ kiểm soát tự động 350°C – 450°C:</span>
+                <p className="text-forest-200/80 leading-relaxed">
+                  Hệ thống cảm biến nhiệt và bảng điều khiển điện tử đảm bảo lò không bị "than sống" hoặc "cháy thành tro". Cấu trúc cellulose phân hủy hoàn toàn trong khi khung Lignin cứng của mô sợi bã chè được giữ lại, tạo diện tích bề mặt riêng BET &gt; 400 m²/g.
+                </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-forest-900/60 border border-forest-800 text-xs">
-                <span className="font-bold text-white block mb-0.5">Thời gian lưu tối ưu 45 đến 60 phút:</span>
-                <p className="text-forest-200/80 leading-relaxed">Đạt hiệu suất thu hồi biochar lên tới 71% đến 77%, công suất thiết kế 150kg nguyên liệu/giờ, cho ra 80 đến 100kg biochar thành phẩm/ngày.</p>
+                <span className="font-bold text-white block mb-0.5">Xử lý hạ ẩm bã chè tươi trong vòng 12 giờ:</span>
+                <p className="text-forest-200/80 leading-relaxed">
+                  Bã chè tươi ẩm &gt;60% - 70% được đưa qua máy vắt ép trục vít hạ ẩm xuống &lt;35% rồi sấy nhiệt dư gối đầu xuống &lt;10% trước khi nạp qua trục vít tự động vào lò, ngăn ngừa hoàn toàn nguy cơ lên men chua thối.
+                </p>
               </div>
             </div>
           </div>
@@ -73,45 +79,58 @@ export default function CircularTechPage({ setActivePage }) {
           <div className="lg:col-span-6 space-y-4">
             <div className="bg-forest-900/50 p-6 rounded-3xl border border-forest-800 space-y-4">
               <h4 className="font-bold text-xs text-forest-200 uppercase tracking-wider">
-                Bảng So Sánh Hiệu Suất Kỹ Thuật
+                Thông Số Kỹ Thuật Xưởng Pilot Thực Nghiệm (Thanh Sơn)
               </h4>
 
               <div className="space-y-3 text-xs">
                 <div className="p-3.5 rounded-2xl bg-forest-950/80 border border-forest-800">
                   <div className="flex justify-between font-bold text-white">
-                    <span>1. Thiết bị than hóa cải tiến nội địa:</span>
-                    <span className="text-forest-300 font-semibold">Hiệu suất ~71%</span>
+                    <span>Năng lực nạp liệu đầu vào:</span>
+                    <span className="text-emerald-400 font-semibold">60 kg bã chè / giờ</span>
                   </div>
                   <p className="text-forest-200/80 mt-1">
-                    Đặc tính: Tỷ trọng hạt vừa phải, giữ nguyên khoáng chất tự nhiên. Phù hợp nhất cho phối trộn phân vi sinh bón đồi chè và cây ăn quả.
+                    Chế độ vận hành: 5 tiếng/ngày (4 tiếng sản xuất Than sinh học và 1 tiếng nung hoạt hóa Than lọc nước), 6 ngày/tuần.
                   </p>
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-forest-950/80 border border-forest-800">
                   <div className="flex justify-between font-bold text-white">
-                    <span>2. Lò nung yếm khí nhiệt độ cao:</span>
-                    <span className="text-forest-300 font-semibold">Hiệu suất ~77%</span>
+                    <span>Hiệu suất thu hồi thành phẩm:</span>
+                    <span className="text-emerald-400 font-semibold">~ 50% (30 kg đầu ra/giờ)</span>
                   </div>
                   <p className="text-forest-200/80 mt-1">
-                    Đặc tính: Diện tích bề mặt cực đại (trên 400 m2/g), dung tích hấp thu cation (CEC) cao. Phù hợp làm than hoạt tính lọc nước thải và nước giếng khoan.
+                    Sản lượng đạt ~120 kg thành phẩm/ngày trong 4 giờ sản xuất chính; sản lượng dự kiến toàn xưởng Pilot đạt <strong>43,2 tấn thành phẩm/năm</strong>.
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-forest-950/80 border border-forest-800">
+                  <div className="flex justify-between font-bold text-white">
+                    <span>Vốn đầu tư thiết bị ban đầu (Capex):</span>
+                    <span className="text-amber-300 font-semibold">100.000.000 VNĐ</span>
+                  </div>
+                  <p className="text-forest-200/80 mt-1">
+                    Gồm cụm lò cải tiến Syngas (60tr), máy vắt ép trục vít (20tr), máy trộn nguyên liệu vi sinh (10tr) và máy đóng gói bán tự động (10tr).
                   </p>
                 </div>
               </div>
 
               <div className="p-3.5 rounded-2xl bg-forest-950 border border-forest-800 text-xs text-forest-200">
-                <strong>Tiết kiệm vốn đầu tư (Capex):</strong> Dự toán thiết bị cố định chỉ 126.000.000 VNĐ, tổng vốn ban đầu 215.000.000 VNĐ, hoàn toàn an toàn tài chính cho startup sinh viên.
+                <strong>Hiệu quả kinh tế & hoàn vốn:</strong> Tổng vốn 300 triệu đ, chi phí vận hành năm 1 chỉ 200 triệu đ nhờ Syngas tự nuôi lò, doanh thu 691,2 triệu đ, cán mốc hoàn vốn chỉ sau ~9 tháng.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. TRIPLE VALUE CREATION */}
+      {/* 3. TUYÊN BỐ GIÁ TRỊ CỐT LÕI */}
       <section className="space-y-8">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight">
-            Tuyên Bố Giá Trị Cốt Lõi
+            Tuyên Bố Giá Trị Cốt Lõi Dự Án
           </h2>
+          <p className="text-xs sm:text-sm text-charcoal-500 mt-1">
+            Mang lại lợi ích thiết thực và đo lường được cho các đối tác trong chuỗi tuần hoàn Đất Tổ.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -119,19 +138,19 @@ export default function CircularTechPage({ setActivePage }) {
             <span className="text-xs font-bold text-forest-800 uppercase tracking-wider block">
               Dành Cho
             </span>
-            <h3 className="font-bold text-forest-950 text-base">Nhà Máy Chế Biến Chè</h3>
+            <h3 className="font-bold text-forest-950 text-base">Nhà Máy & HTX Chế Biến Chè</h3>
             <ul className="space-y-2 text-xs text-charcoal-600">
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Giải quyết 100% bãi thải bã chè tại nhà máy, tránh rủi ro phạt môi trường.</span>
+                <span>Giải quyết 100% bãi rác bã chè phế phẩm, tránh nguy cơ lên men thối trong 24-48h.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Tiết kiệm 500.000đ đến 1.000.000đ chi phí xử lý rác cho mỗi tấn bã chè.</span>
+                <span>Tiết kiệm 500.000đ – 1.000.000đ chi phí chôn lấp rác cho mỗi tấn bã chè.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Được ưu đãi giảm 30% khi mua vật tư cải tạo đất cho vùng chè nguyên liệu.</span>
+                <span>Được hưởng mức chiết khấu ưu đãi từ 15% - 20% khi mua Than sinh học bón lại đồi chè.</span>
               </li>
             </ul>
           </div>
@@ -140,19 +159,19 @@ export default function CircularTechPage({ setActivePage }) {
             <span className="text-xs font-bold text-forest-800 uppercase tracking-wider block">
               Dành Cho
             </span>
-            <h3 className="font-bold text-forest-950 text-base">Bà Con Nông Dân</h3>
+            <h3 className="font-bold text-forest-950 text-base">Bà Con Nông Dân & Nhà Vườn</h3>
             <ul className="space-y-2 text-xs text-charcoal-600">
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Nâng pH đất chua, giải độc nhôm sắt, giữ ẩm đồi chè suốt mùa khô hạn.</span>
+                <span>Hạ chua êm dịu, đưa độ pH đất đồi từ &lt; 4.0 về dải tối ưu 4.8 - 5.5 cho cây chè.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Giảm từ 25% đến 30% lượng phân bón hóa học NPK đắt đỏ mỗi năm.</span>
+                <span>Cắt giảm 20% - 30% chi phí phân bón vô cơ NPK đắt đỏ nhờ khả năng giữ dinh dưỡng.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Tannin tự nhiên của chè giúp rễ kháng nấm, hạn chế bệnh vàng lá thối rễ.</span>
+                <span>Chủng vi sinh bản địa đối kháng Trichoderma tiêu diệt nấm thối rễ, kích rễ tơ bung trắng.</span>
               </li>
             </ul>
           </div>
@@ -161,19 +180,19 @@ export default function CircularTechPage({ setActivePage }) {
             <span className="text-xs font-bold text-forest-800 uppercase tracking-wider block">
               Dành Cho
             </span>
-            <h3 className="font-bold text-forest-950 text-base">Môi Trường & ESG</h3>
+            <h3 className="font-bold text-forest-950 text-base">Môi Trường & Cam Kết Net Zero</h3>
             <ul className="space-y-2 text-xs text-charcoal-600">
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Triệt tiêu khí mê-tan sinh ra khi bã chè tự phân hủy tại bãi rác.</span>
+                <span>Khóa chặt hơn 50% carbon hữu cơ trong đất, giảm phát thải 2,5 – 3 tấn CO₂e / tấn Biochar.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Khóa chặt 50% carbon sinh khối vào lòng đất trong hơn 100 năm.</span>
+                <span>Triệt tiêu khí mê-tan (CH₄) và CO₂ phát thải tự do khi phế phẩm chè bị vứt bỏ bãi rác.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-700 font-bold">•</span>
-                <span>Tạo tiềm năng phát hành Tín chỉ Carbon và đáp ứng tiêu chuẩn CBAM.</span>
+                <span>Đón đầu thương mại hóa tín chỉ carbon và hỗ trợ nông sản vượt rào thuế carbon CBAM sang EU.</span>
               </li>
             </ul>
           </div>
@@ -186,7 +205,7 @@ export default function CircularTechPage({ setActivePage }) {
           onClick={() => setActivePage('b2b')}
           className="px-8 py-3.5 rounded-full bg-forest-950 hover:bg-forest-900 text-white font-semibold text-xs sm:text-sm shadow-md transition btn-press"
         >
-          Hợp Tác Thu Gom Bã Chè & Cung Ứng Vật Tư
+          Liên Kết Tham Gia Chuỗi Cung Ứng Tuần Hoàn
         </button>
       </div>
     </div>

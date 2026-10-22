@@ -1,68 +1,74 @@
 export const blogArticles = [
   {
     id: 'ky-thuat-cai-tao-dat-chua-doi-che',
-    title: 'Kỹ Thuật Sử Dụng Biochar Bã Chè Cải Tạo Đất Chua Đồi Chè Trung Du Phú Thọ',
-    summary: 'Đất trồng chè sau nhiều năm thâm canh phân hóa học thường bị chua hóa nghiêm trọng (pH dưới 4.5), dẫn đến búp chè cứng, xơ và dễ bị nấm rễ. Hướng dẫn chi tiết cách phối trộn Biochar phục hồi sinh lực đất.',
-    date: '15/08/2026',
-    author: 'TS. Nguyễn Văn Hưng & Mai Lan',
+    title: 'Kỹ Thuật Sử Dụng Than Sinh Học Bã Chè Hạ Chua & Cải Tạo Đất Đồi Chè Phú Thọ',
+    summary: 'Cây chè ưa đất chua nhẹ (pH 4.5 - 5.5), tuy nhiên sau nhiều năm thâm canh phân bón vô cơ, đất chè Phú Thọ đang bị chua hóa nghiêm trọng, nhiều nơi pH tụt xuống dưới 4.0. Hướng dẫn kỹ thuật bón Biochar hạ chua và phục hồi rễ chè.',
+    date: '15/10/2026',
+    author: 'Nguyễn Ngọc Mai Lan & Hoàng Thị Ngọc Lân',
     readTime: '6 phút đọc',
     category: 'Kỹ Thuật Canh Tác',
     image: '/images/hero_tea_hills.jpg',
     content: `
 1. Thực trạng đất trồng chè vùng Trung du Phú Thọ
-Vùng đất đồi Phú Thọ là cái nôi của cây chè Việt Nam với hơn 16.000 ha. Tuy nhiên, việc bón phân hóa học liên tục qua nhiều thập kỷ khiến độ pH đất sụt giảm mạnh xuống mức 3.8 đến 4.2. Ở độ chua này:
-- Cây chè không thể hấp thụ được lân và vi lượng thiết yếu.
-- Các vi sinh vật có lợi bị triệt tiêu, nấm Phytophthora phát triển gây bệnh vàng lá, thối rễ tơ.
-- Đất bị rửa trôi chất mùn, trở nên khô cằn và chai cứng khi nắng hạn.
+Phú Thọ sở hữu hơn 14.500 ha chè với sản lượng chè búp tươi đạt trên 180.000 - 193.000 tấn/năm (xếp thứ 2 toàn quốc). Cây chè là loài cây ưa đất chua nhẹ (độ pH tối ưu từ 4.5 – 5.5). Tuy nhiên, do tập quán canh tác thâm canh và lạm dụng các loại phân bón vô cơ gốc axit trong nhiều thập kỷ, đất đai tại các vùng chè miền núi Phú Thọ đang bị chua hóa nghiêm trọng, nhiều nơi ghi nhận độ pH tụt xuống dưới 4.0.
+Hậu quả: Đất bị nghẹt rễ, chai hóa, nghèo chất hữu cơ, mất khả năng giữ nước tự nhiên và búp chè xơ cằn.
 
-2. Cơ chế phục hồi kép của Biochar Bã Chè
-Khác với vôi bột chỉ nâng pH tức thời rồi làm đất chai cứng thêm, Biochar bã chè mang lại 3 tác động bền vững:
-- Nâng và ổn định độ kiềm tự nhiên (pH 7.8 đến 8.5) cùng dung tích trao đổi cation CEC cao (38 meq/100g), trung hòa axit êm dịu, không gây sốc rễ non.
-- Hoạt động như lớp bọt biển giữ nước và dinh dưỡng với diện tích bề mặt trên 400 m2/g, giữ lại nước mưa và phân bón NPK để rễ chè hấp thụ từ từ suốt mùa khô.
-- Hợp chất tannin tự nhiên của chè giúp ức chế các chủng vi nấm gây hại rễ.
+2. Cơ chế "hạ chua, khóa dinh dưỡng" của Than sinh học Bã Chè
+Khác với vôi bột chỉ hạ chua tức thời rồi làm đất chai cứng thêm, Than sinh học bã chè mang lại tác động bền vững vượt trội:
+- Độ pH kiềm tự nhiên (8.5 - 9.5) trung hòa êm dịu độ chua của đất, nâng pH từ < 4.0 về mức tối ưu 4.8 - 5.5 cho cây chè và 6.0 - 6.5 cho cây ăn quả đặc sản.
+- Cấu trúc mô sợi bã chè giữ lại khung Lignin cứng siêu xốp với diện tích bề mặt riêng cực lớn (> 400 m²/g), hoạt động như miếng bọt biển sinh học ngậm nước và giữ phân bón NPK không bị rửa trôi.
+- Bọc chủng vi sinh vật bản địa Trichoderma giúp tiêu diệt mầm nấm thối rễ, kích thích đẻ rễ tơ trắng xóa.
 
-3. Quy trình bón khuyến nghị
-- Bón lót phục hồi đồi chè: 1.0 đến 1.2 tấn Biochar/ha/năm (khoảng 35 đến 45kg cho mỗi sào Bắc Bộ 360m2). Rải đều theo rãnh giữa hai hàng chè rồi xới nhẹ lấp đất.
-- Bón thúc kết hợp phân vi sinh: Trộn tỷ lệ 1 phần Biochar + 1 phần Phân hữu cơ vi sinh bón đón đợt búp mới.
+3. Quy trình bón khuyến nghị từ thực nghiệm
+- Bón lót phục hồi đồi chè: 1.0 đến 1.2 tấn Biochar/ha/năm (khoảng 35 đến 45kg cho mỗi sào Bắc Bộ 360m²). Rải đều theo rãnh giữa hai hàng chè rồi xới nhẹ lấp đất.
+- Bón thúc kết hợp vi sinh: Sử dụng Biochar-Microbe bọc vi sinh Trichoderma bón đón đợt búp mới, tiết kiệm 20% - 30% chi phí phân bón hóa học.
     `
   },
   {
     id: 'giai-phap-nuoc-gieng-khoan-than-hoat-tinh',
-    title: 'Giải Pháp Lọc Phèn & Độc Tố Nước Giếng Khoan Bằng Than Hoạt Tính Bã Chè Giá Rẻ',
-    summary: 'Áp lực nước ngầm nhiễm phèn sắt và dư lượng thuốc trừ sâu tại vùng nông thôn trung du. Làm sao để có nguồn nước sinh hoạt đạt chuẩn với chi phí chỉ bằng 1/3 thị trường?',
-    date: '02/08/2026',
-    author: 'Lưu Tuyết Anh (Ban Tài Chính)',
+    title: 'Giải Pháp Than Hoạt Tính Kỹ Thuật Bã Chè: Lọc Nước Thải KCN & Nước Giếng Khoan Phú Thọ',
+    summary: 'Ứng dụng công nghệ hoạt hóa hóa học kết hợp nung yếm khí 400°C - 600°C tạo than hoạt tính bã chè với giá thành chỉ 20.000đ/kg, phục vụ xử lý nước thải KCN Thụy Vân, Cẩm Khê và nước sinh hoạt.',
+    date: '10/10/2026',
+    author: 'Lưu Tuyết Anh & Phạm Hồng Ngọc',
     readTime: '5 phút đọc',
     category: 'Môi Trường & Nước Sạch',
     image: '/images/product_carbon.jpg',
     content: `
-Nhu cầu nước sạch bức thiết tại Phú Thọ
-Hơn 65% hộ gia đình nông thôn và ven đô tại các huyện Thanh Sơn, Tân Sơn, Cẩm Khê vẫn đang sử dụng nước giếng khoan. Đặc điểm thổ nhưỡng trung du khiến nguồn nước thường xuyên nhiễm sắt (nước có mùi tanh, ngả vàng sau khi tiếp xúc không khí) và nguy cơ tồn dư hóa chất bảo vệ thực vật thấm sâu vào mạch nước ngầm.
+1. Nhu cầu xử lý nước thải và nước sinh hoạt bức thiết
+Tại Phú Thọ, các nhà máy dệt nhuộm, linh kiện điện tử và giấy tại KCN Thụy Vân, KCN Cẩm Khê có nhu cầu mua sắm vật liệu hấp phụ xốp rất lớn (quy mô SAM ước tính 90 tỷ VNĐ/năm). Đồng thời, hàng chục nghìn hộ dân nông thôn vẫn sử dụng nước giếng khoan bị nhiễm phèn sắt và tồn dư hóa chất.
 
-Ưu thế của Than hoạt tính chế tạo từ Bã Chè
-- Than gáo dừa miền Nam hoặc than đá nhập khẩu có giá từ 35.000đ đến 60.000đ/kg, chi phí vận chuyển đường dài khiến giá đội lên rất cao.
-- Than hoạt tính bã chè Phú Thọ được sản xuất tại chỗ từ phế phẩm 0 đồng, bán lẻ chỉ 45.000đ/gói 500g và bán sỉ cho bể lọc gia đình chỉ 14.000 đến 16.000đ/kg.
-- Chỉ số hấp phụ Iodine đạt trên 850 mg/g, khử hoàn toàn mùi tanh, loại bỏ trên 95% lượng sắt và kim loại nặng.
+2. Quy trình sản xuất than hoạt tính kỹ thuật bã chè
+- Than sinh học sau nhiệt phân được ngâm tẩm hóa chất (H2SO4 hoặc KOH loãng) từ 12 - 24 tiếng để mở rộng tối đa diện tích mao quản.
+- Nạp vào lò nung hoạt hóa chuyên dụng ở dải nhiệt độ cao 400°C - 600°C trong môi trường yếm khí.
+- Rửa sạch bằng nước trung hòa cho tới khi nước rửa đạt độ pH trung tính (~7), loại bỏ hoàn toàn hóa chất và tro mịn, sau đó sấy khô đóng bao chống ẩm.
+
+3. Ưu thế thương mại vượt trội
+- Giá chào thầu cho các nhà máy KCN chỉ 20.000.000 VNĐ/tấn (rẻ hơn đáng kể so với than đá nhập khẩu hay than gáo dừa miền Nam).
+- Diện tích bề mặt riêng BET > 400 m²/g, hấp phụ chọn lọc ion kim loại nặng (chì, asen, cadmi) và khử mùi tanh hôi.
     `
   },
   {
     id: 'mo-hinh-tuan-hoan-doi-phe-pham-lay-vat-tu',
-    title: 'Mô Hình "Đổi Phế Phẩm Lấy Vật Tư": Lời Giải Cho 27.000 Tấn Bã Chè Mỗi Năm',
-    summary: 'Cách dự án liên kết với 60 cơ sở chế biến chè lớn tại Phú Thọ để biến chi phí rác thải 1 triệu đồng/tấn thành nguồn vật tư phân bón hữu cơ giá ưu đãi.',
-    date: '20/07/2026',
-    author: 'Nguyễn Ngọc Mai Lan (Trưởng Nhóm)',
+    title: 'Cơ Chế Liên Kết "Đổi Phế Phẩm Lấy Vật Tư": Vòng Lặp Xanh Cho 27.000 Tấn Bã Chè',
+    summary: 'Cách dự án liên kết với 60 cơ sở và 15 HTX chế biến chè tại Phú Thọ: Thu gom bã chè phế phẩm, chế biến sâu và cung ứng ngược lại Than sinh học với mức chiết khấu ưu đãi 15% - 20%.',
+    date: '02/10/2026',
+    author: 'Nguyễn Ngọc Mai Lan & Hà Thị Thu Thủy',
     readTime: '7 phút đọc',
     category: 'Kinh Tế Tuần Hoàn',
     image: '/images/diagram_circular_model.jpg',
     content: `
-Thách thức của các nhà máy chè Phú Thọ
-Mỗi năm, các cơ sở chế biến chè thải ra từ 15.000 đến 27.000 tấn bã chè ẩm sau khi chiết xuất hoặc tinh chế. Nếu chôn lấp, doanh nghiệp phải trả từ 500.000đ đến 1.000.000đ cho mỗi tấn rác thải công nghiệp. Nếu đốt tự do, khói đen sẽ dẫn đến nguy cơ bị xử phạt nặng về môi trường.
+1. "Nỗi đau" rác thải hữu cơ ngành trà Phú Thọ
+Phú Thọ phát sinh tới 27.000 tấn bã chè mỗi năm. Khác với vỏ trấu dễ đốt hay gáo dừa khô, bã chè tươi có độ ẩm cao (>60% - 70%), dễ lên men thối trong 24 - 48 giờ, gây ô nhiễm mùi nghiêm trọng và tốn chi phí chôn lấp 500.000đ - 1.000.000đ/tấn cho các cơ sở chế biến.
 
-Chu trình "Từ Đất Tổ, Trả Lại Đất Tổ"
-Dự án đề xuất cơ chế hợp tác đôi bên cùng có lợi:
-1. Thu gom tận nơi với chi phí 0đ: Dự án bố trí xe tải thu gom bã chè định kỳ, giúp nhà máy giải phóng 100% bãi rác và tiết kiệm chi phí môi trường.
-2. Chiết khấu hoàn trả phân bón: Đổi lại, nhà máy hoặc vùng trồng chè nguyên liệu của HTX được mua Biochar và Phân hữu cơ vi sinh với mức giá ưu đãi giảm 30% so với giá thị trường.
-3. Khép kín chuỗi giá trị: Cây chè được nuôi dưỡng bằng chính dưỡng chất của thế hệ búp chè trước, tạo ra sản phẩm chè hữu cơ đạt chuẩn OCOP và xuất khẩu quốc tế.
+2. Mô hình "Đổi phế phẩm lấy vật tư"
+Dự án tiên phong thiết lập chuỗi cung ứng khép kín:
+- Startup ký hợp đồng bao tiêu rác thải bã chè dài hạn, điều phối xe tải thu gom tận nơi về xưởng Thanh Sơn (hạch toán chi phí logistics thực tế 300.000 VNĐ/tấn bã ẩm).
+- Chế biến sâu thành Than sinh học Biochar-Microbe bọc vi sinh Trichoderma.
+- Cung ứng ngược lại cho chính các cơ sở, HTX và vùng trồng chè với mức chiết khấu ưu đãi từ 15% - 20% để bón lại phục hồi chính đồi chè nguyên liệu.
+
+3. Lợi ích kép cho cộng đồng và mục tiêu Net Zero
+- Tự chủ năng lượng: Tận dụng dòng khí sinh học Syngas tuần hoàn làm chất đốt tự nuôi lò, cắt giảm 80% chi phí chất đốt.
+- Khóa carbon lâu dài: Mỗi tấn Biochar bón vào đất giúp cô lập bền vững hàng trăm năm, giảm phát thải 2,5 - 3 tấn CO₂e ra khí quyển, hướng tới mục tiêu quốc gia Net Zero 2050 và hàng rào thuế CBAM của EU.
     `
   }
 ];
@@ -70,36 +76,53 @@ Dự án đề xuất cơ chế hợp tác đôi bên cùng có lợi:
 export const traceBatches = [
   {
     code: 'BATCH-TS2026-01',
-    product: 'Biochar Bã Chè Nguyên Chất Bao 5kg',
-    productionDate: '12/08/2026',
-    teaOrigin: 'Hợp Tác Xã Chè Hảo Thơ, Xã Địch Quả, Huyện Thanh Sơn, Phú Thọ',
-    rawMaterialWeight: '2.500 kg bã chè tươi đã chiết xuất',
-    pyrolysisTemp: '420°C (Yếm khí buồng đốt Syngas)',
-    retentionTime: '52 phút',
+    product: 'Than Sinh Học Cải Tạo Đất Biochar Đất Tổ (Bao 5kg)',
+    productionDate: '22/10/2026',
+    teaOrigin: 'Mạng lưới 60 cơ sở & 15 HTX chế biến chè Huyện Thanh Sơn, Phú Thọ',
+    rawMaterialWeight: '2.400 kg bã chè ẩm công nghiệp',
+    pyrolysisTemp: '380°C - 420°C (Yếm khí tuần hoàn khí Syngas tự nuôi lò)',
+    retentionTime: '50 phút',
     testResults: {
-      pH: '8.2 (Chuẩn kiềm trung hòa)',
-      carbonContent: '71.4%',
-      cec: '39.2 meq/100g',
-      moisture: '6.5%'
+      pH: '8.8 (Kiềm tự nhiên hạ chua đất)',
+      carbonContent: '72.5%',
+      cec: '39.8 meq/100g',
+      moisture: '7.2%'
     },
-    carbonOffsetKg: '1.850 kg CO2e tương đương đã được cô lập vĩnh viễn trong đất',
-    certifiedBy: 'Phòng Thí nghiệm Đất & Phân bón, Viện KHKT Nông Lâm nghiệp Trung du Miền núi Phía Bắc'
+    carbonOffsetKg: '2.800 kg CO2e tương đương được cô lập bền vững trong đất',
+    certifiedBy: 'Viện Nghiên Cứu Chè Phú Thọ & PTN Liên khoa Đại Học Hùng Vương'
   },
   {
     code: 'BATCH-DH2026-08',
-    product: 'Phân Hữu Cơ Vi Sinh Biochar-Microbe Bao 25kg',
-    productionDate: '18/08/2026',
-    teaOrigin: 'Công ty Cổ phần Chè Phú Đa, Huyện Tân Sơn, Phú Thọ',
-    rawMaterialWeight: '4.200 kg bã chè xanh',
-    pyrolysisTemp: '380°C',
-    retentionTime: '58 phút',
+    product: 'Than Sinh Học Bọc Vi Sinh Biochar-Microbe (Bao 25kg)',
+    productionDate: '20/10/2026',
+    teaOrigin: 'Hợp Tác Xã Chè Huyện Tân Sơn & Thanh Ba, Tỉnh Phú Thọ',
+    rawMaterialWeight: '4.800 kg cọng chè già và bã ẩm sau trích ly',
+    pyrolysisTemp: '400°C',
+    retentionTime: '55 phút',
     testResults: {
-      pH: '7.6',
-      carbonContent: '68.0%',
-      microbeDensity: '2.4 x 10⁸ CFU/g (Bacillus + Trichoderma)',
-      moisture: '21.0%'
+      pH: '8.2',
+      carbonContent: '70.8%',
+      microbeDensity: '≥ 1.0 x 10⁸ CFU/g (Chủng Trichoderma bản địa)',
+      moisture: '16.5%'
     },
-    carbonOffsetKg: '3.100 kg CO2e tương đương được cô lập',
-    certifiedBy: 'Trung tâm Nghiên cứu Ứng dụng & Chuyển giao CNSH, ĐH Hùng Vương'
+    carbonOffsetKg: '2.750 kg CO2e tương đương cô lập / tấn thành phẩm',
+    certifiedBy: 'Viện Nghiên Cứu Chè Phú Thọ & ĐH Hùng Vương'
+  },
+  {
+    code: 'BATCH-KCN2026-03',
+    product: 'Than Hoạt Tính Kỹ Thuật Bã Chè Lọc Nước Thải KCN (Bao 25kg)',
+    productionDate: '18/10/2026',
+    teaOrigin: 'Phụ phẩm nhà máy sản xuất nước giải khát đóng chai Phú Thọ',
+    rawMaterialWeight: '3.600 kg bã ẩm',
+    pyrolysisTemp: 'Nhiệt phân 420°C + Nung hoạt hóa 550°C sau ngâm tẩm hóa học',
+    retentionTime: 'Lưu lò hoạt hóa 60 phút + Rửa trung hòa pH 7',
+    testResults: {
+      pH: '7.1 (Trung tính hoàn toàn sau rửa)',
+      surfaceAreaBET: '425 m²/g',
+      ashContent: '4.2%',
+      heavyMetalAdsorption: 'Đạt tiêu chuẩn nước thải công nghiệp KCN Thụy Vân, Cẩm Khê'
+    },
+    carbonOffsetKg: 'Cô lập 2.650 kg CO2e / tấn thành phẩm',
+    certifiedBy: 'Viện Nghiên Cứu Chè Phú Thọ & PTN ĐH Hùng Vương'
   }
 ];

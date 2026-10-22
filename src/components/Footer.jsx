@@ -20,14 +20,17 @@ export default function Footer({ setActivePage }) {
               />
             </div>
             <p className="text-xs sm:text-sm text-charcoal-300 leading-relaxed pr-4 text-pretty">
-              Dự án khởi nghiệp của sinh viên Đại học Hùng Vương, Phú Thọ: Chuyển hóa hàng chục nghìn tấn bã chè phế phẩm thành than sinh học xốp vi mô cải tạo đất thoái hóa, phân vi sinh bản địa và than hoạt tính lọc nước sạch.
+              Dự án khởi nghiệp của sinh viên ĐH Hùng Vương (Đội Hùng Vương Đất Tổ): Thiết lập chuỗi cung ứng xanh khép kín từ phế phụ phẩm ngành trà Phú Thọ (cọng già, cám bụi, bã chè ẩm) thành Than sinh học cải tạo đất Biochar-Microbe và Than hoạt tính lọc nước kỹ thuật cao.
             </p>
             <div className="p-3.5 rounded-2xl bg-forest-950/60 border border-forest-900/60 text-xs text-charcoal-200 space-y-1">
               <div className="text-forest-300 font-bold">
                 Ý TƯỞNG KHỞI NGHIỆP SINH VIÊN HÙNG VƯƠNG 2026
               </div>
               <p className="text-charcoal-400">
-                Trường Đại Học Hùng Vương, Tỉnh Phú Thọ
+                Đội thi: Hùng Vương Đất Tổ • Trường Đại Học Hùng Vương
+              </p>
+              <p className="text-emerald-400 text-[11px]">
+                Giảng viên cố vấn: Th.s Dương Thị Dung
               </p>
             </div>
           </div>
@@ -49,10 +52,13 @@ export default function Footer({ setActivePage }) {
                 <button onClick={() => handleNav('b2b')} className="hover:text-forest-200 transition">Chương Trình Đổi Phế Phẩm</button>
               </li>
               <li>
-                <button onClick={() => handleNav('trace')} className="hover:text-forest-200 transition">Tra Cứu Mã QR Lô Hàng</button>
+                <button onClick={() => handleNav('trace')} className="hover:text-forest-200 transition">Tra Cứu Mã QR Carbon</button>
               </li>
               <li>
-                <button onClick={() => handleNav('blog')} className="hover:text-forest-200 transition">Cẩm Nang Đất & Cây Chè</button>
+                <button onClick={() => handleNav('about')} className="hover:text-forest-200 transition">Hồ Sơ & Tài Chính</button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('blog')} className="hover:text-forest-200 transition">Cẩm Nang Kỹ Thuật</button>
               </li>
             </ul>
           </div>
@@ -62,19 +68,19 @@ export default function Footer({ setActivePage }) {
             <h4 className="text-white font-bold text-xs uppercase tracking-wider">Dòng Sản Phẩm</h4>
             <ul className="space-y-2 text-xs text-charcoal-300">
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Biochar Bã Chè Cải Tạo Đất
+                Biochar Cải Tạo Đất Đất Tổ (15tr/tấn)
               </li>
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Phân Vi Sinh Biochar Microbe
+                Biochar-Microbe Bọc Vi Sinh Trichoderma
               </li>
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Than Hoạt Tính Lọc Nước Thải & Phèn
+                Than Hoạt Tính Kỹ Thuật Lọc Nước (20tr/tấn)
               </li>
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Dấm Gỗ Sinh Học Bã Chè
+                Viên Nén Mini Cho Sen Đá & Cây Cảnh
               </li>
               <li className="hover:text-white cursor-pointer" onClick={() => handleNav('shop')}>
-                Combo Sống Xanh Nông Nghiệp Đô Thị
+                Combo Sống Xanh Đất Tổ Đô Thị
               </li>
             </ul>
           </div>
@@ -86,35 +92,31 @@ export default function Footer({ setActivePage }) {
               <div>
                 <span className="font-semibold text-white">Trưởng nhóm: Nguyễn Ngọc Mai Lan</span>
                 <p className="text-charcoal-400">Lớp K22 Kế Toán B, ĐH Hùng Vương</p>
+                <p className="text-forest-300 font-bold mt-0.5">Hotline: 0365.542.212</p>
+                <p className="text-charcoal-400 text-[11px] break-all">nnmlan2006@gmail.com</p>
               </div>
 
-              <div>
-                <span className="text-charcoal-400">Hotline: </span>
-                <a href="tel:0964135205" className="text-forest-200 font-bold hover:underline">
-                  0964.135.205
-                </a>
+              <div className="pt-2 border-t border-forest-900/60">
+                <span className="text-charcoal-400">Kế toán & Tài chính: </span>
+                <span className="text-white font-medium">Lưu Tuyết Anh</span>
+                <p className="text-charcoal-400 text-[11px]">SĐT: 0964.135.205</p>
               </div>
 
-              <div>
-                <span className="text-charcoal-400">Email: </span>
-                <span className="text-charcoal-300 break-all">nguyenngocmailan.biochar@gmail.com</span>
-              </div>
-
-              <div>
-                <span className="text-charcoal-400">Xưởng SX: </span>
-                <span>CCN Giáp Lai, Thanh Sơn, Phú Thọ</span>
+              <div className="pt-2 border-t border-forest-900/60">
+                <span className="text-charcoal-400">Xưởng Pilot thực nghiệm: </span>
+                <p className="text-charcoal-300 text-[11px]">Huyện Thanh Sơn, Tỉnh Phú Thọ</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
+        {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-charcoal-400 gap-4">
-          <p>© 2026 Dự án Than sinh học (Biochar) từ bã chè. Đội thi Đại học Hùng Vương, Phú Thọ.</p>
-          <div className="flex items-center gap-4">
-            <span>Tiêu chuẩn IBI & Net Zero 2050</span>
-            <span>•</span>
-            <span>Kinh tế tuần hoàn: Từ Đất Tổ, Trả Lại Đất Tổ</span>
+          <p>© 2026 Dự án Than Sinh Học Từ Phế Phẩm Chè Phú Thọ. Đội thi Hùng Vương Đất Tổ.</p>
+          <div className="flex items-center space-x-6">
+            <span>Đại Học Hùng Vương</span>
+            <span>Viện Nghiên Cứu Chè Phú Thọ</span>
+            <span className="text-emerald-400">Net Zero 2050</span>
           </div>
         </div>
       </div>

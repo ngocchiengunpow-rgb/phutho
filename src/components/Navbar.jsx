@@ -27,17 +27,17 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
       <div className="bg-forest-950 text-forest-200 text-[11px] py-1.5 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-white tracking-wide">Dự Án Khởi Nghiệp Sinh Viên ĐH Hùng Vương 2026</span>
+            <span className="font-semibold text-white tracking-wide">Đội Hùng Vương Đất Tổ • Startup Idea 2026</span>
             <span className="hidden md:inline text-forest-400">•</span>
-            <span className="hidden md:inline text-forest-300">Kinh tế tuần hoàn từ bã chè Phú Thọ</span>
+            <span className="hidden md:inline text-forest-300">Than Sinh Học Từ Bã Chè Phú Thọ</span>
           </div>
 
           <div className="flex items-center gap-4 font-semibold text-white">
-            <a href="tel:0964135205" className="hover:underline">
-              Hotline: 0964.135.205
+            <a href="tel:0365542212" className="hover:underline">
+              Hotline: 0365.542.212
             </a>
             <span className="text-forest-400 hidden sm:inline">•</span>
-            <span className="text-forest-300 hidden sm:inline">ĐH Hùng Vương</span>
+            <span className="text-forest-300 hidden sm:inline">Trường ĐH Hùng Vương</span>
           </div>
         </div>
       </div>
@@ -129,18 +129,12 @@ export default function Navbar({ activePage, setActivePage, cartCount, openCart 
               <span>{item.label}</span>
             </button>
           ))}
-          <div className="pt-3 border-t border-forest-950/10 space-y-2">
-            <a
-              href="tel:0964135205"
-              className="block text-center w-full py-2.5 rounded-full bg-forest-50 text-forest-950 font-bold text-xs"
-            >
-              Hotline Trưởng nhóm: 0964.135.205
-            </a>
+          <div className="pt-3 border-t border-forest-950/10 flex flex-col gap-2">
             <button
               onClick={() => handleNavClick('b2b')}
-              className="w-full py-2.5 rounded-full bg-forest-950 text-white font-bold text-xs shadow-sm"
+              className="w-full py-2.5 rounded-xl bg-forest-950 text-white font-bold text-xs"
             >
-              Đăng Ký Đổi Phế Phẩm Lấy Vật Tư
+              Liên Hệ Hợp Tác B2B
             </button>
           </div>
         </div>
